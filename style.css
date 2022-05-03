@@ -1,3 +1,29 @@
+#learnMoreContainer {
+  position: relative;
+  background-color: black;
+  color: white;
+  width: 250px;
+  height: 46px;
+  left: 1210px;
+/* top: 924px; */
+
+  background: #000000;
+  border-radius: 15px;
+
+}
+
+#learnMoreContainer h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 18px;
+  line-height: 46px;
+  text-align: center;
+  text-decoration: underline;
+  padding-bottom: 30px;
+
+}
+
 #mission {
   position: relative;
 
