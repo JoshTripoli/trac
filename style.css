@@ -21,9 +21,9 @@
 }
 
 .search-container {
-  position: fixed;
+  position: absolute;
   right: 40px;
-  top: 65px;
+  top: 40px;
 }
 
 .search-container input[type=text] {
@@ -70,8 +70,8 @@
 }
 
 #socialmedia img{
-  width: 1.75em;
-  padding: 5px;
+  width: 2em;
+  padding: 3px;
 }
 
 
@@ -84,14 +84,14 @@
     width: 100%;
     z-index: 99999999999;
     position: relative; /*Make it come out of the flow, no longer blocking*/
-    margin-top:-7px;
+    margin-top:20px;
   }
   
   header {
     
 
 
-    position: fixed; /*Make it come out of the flow, no longer blocking*/
+    position: relative; /*Make it come out of the flow, no longer blocking*/
     width: 1200px;
     height: 50px;
     left: 50%;
