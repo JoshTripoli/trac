@@ -1,0 +1,231 @@
+body{
+    background-color: #33315D;
+    /* width: 100%;
+    height: 95vh; */
+    /* overflow: hidden; */
+  }
+  
+  #learnMoreContainer {
+    position: relative;
+    /* background-color: #423BCC; */
+    background-color: #110F34;
+    color: white;
+    width: 16vw;
+    height: 3em;
+    left: 30.5vw;
+    margin-top: -5vh;
+  /* top: 924px; */
+    border-radius: 1em;
+  }
+  
+  #learnMoreContainer h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    /* font-weight: lighter; */
+    font-size: 1em;
+    line-height: 2.9em;
+    text-align: center;
+    text-decoration: underline;
+  }
+  
+  #mission {
+    position: relative;
+    margin-left: 3vw;
+    width: 45%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.22em;
+    line-height: 2em;
+    color: white;
+    /* margin: auto; */
+    padding-top: 3vh;
+    /* font-style: italic; */
+  }
+  
+  #italics {
+      font-style: italic !important;
+  }
+  
+  #mission strong {
+    font-size: 28px;
+  
+  }
+  
+  #missionLabel {
+    position: absolute;
+    margin-left: -45px;
+    margin-top: 5px;
+  }
+  
+  #TRACheader{
+    /* position: relative; */
+    width: 50%;
+    /* background: #EEEEEE; */
+    margin-top: -52vh;
+  }
+  
+  #TRACheader h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.5em;
+    /* line-height: 65px;   */
+    padding-left: 5vh;
+    padding-top: 4vh;
+  }
+  
+  #galleryContainer {
+  
+  }
+  
+  #imageGallery {
+    height: 50vh;
+    width: 50vw;
+    margin-left: auto; 
+    margin-right: 3vh;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+  }
+  
+  #logo {
+    position: relative;
+    width: 12em;
+    margin-right: 1.25vw; /* space between logo and nav buttons*/
+    /* margin-left: -6vw; */
+    /* padding-top: 15px; */
+  
+    /* padding-left: 40px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    padding-right: 10px; */
+  }
+  
+  #socialmedia {
+    position: absolute;
+    float:right;
+    top: 10px;
+    right:60px;
+    padding: 0px;
+  }
+  
+  #socialmedia img{
+    width: 1.85em;
+    padding: 5px;
+    z-index: 10000000000;
+  }
+  
+  .header-container {
+      background: #ffffff;
+      box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+      /* min-height: 50px; */
+      /* margin-bottom: 40px; */
+      /* Make header stick */
+      width: 100%;
+      z-index: 99999999999;
+      position: relative; /*Make it come out of the flow, no longer blocking*/
+      /* margin-top:20px; */
+      font-family: Arial, Helvetica, sans-serif;
+      /* background-color: pink; */
+    }
+    
+    header {
+      position: relative; /*Make it come out of the flow, no longer blocking*/
+      /* width: 100%; */
+      height: 15vh;
+      text-align: center;
+  
+    }
+  
+    
+    .mybutton {
+      position: relative;
+      padding: 2vh 1.5vw;
+      /* margin-left: 70px; */
+      font-size: 1.22em;
+      display: inline-block;
+      /* background-color: green; */
+      vertical-align: middle;
+      color: black;
+    }
+  
+    .mybutton a {
+      color: rgb(0, 0, 0);
+      text-decoration: none; 
+    }
+  
+    .mybutton a:hover{
+      text-decoration: underline; 
+    }
+    
+  
+  
+    .footer-container {
+      background-color: #101C31;
+      min-height: 12vh;
+      /* margin-top: 40px; */
+      width: 100%;
+      align-items: center; /*centers them vertically*/
+      text-align: center;
+      color: white;
+      margin-top: 3vh;
+      position: relative;
+      bottom: 0;
+  }
+  
+  footer {
+      /* background-color: blueviolet; */
+      min-height: 60px;
+      margin-left: auto; 
+      margin-right: auto; 
+      width: 30%;
+      padding-top: 1vh;
+  }
+  
+  .soc {
+    padding-right: 0.25em;
+  }
+  
+  .pageContent {
+    padding: 2em;
+    padding-bottom: 0.5em;
+    background-color: #33315D;
+    text-align: center;
+    color:black;
+  }
+  
+  .innerWhiteBox {
+    background-color: white;
+    width: 60%;
+    margin: auto;
+    padding-bottom: 1.5em;
+  }
+  
+  .pageContent h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2em;
+    /* line-height: 65px;   */
+    padding-left: 5vh;
+    padding-top: 4vh;
+    margin: auto;
+  
+  }
+  
+  .pageContent p {
+    text-align: left;
+    padding-top: 1em;
+    /* margin-left: 3vw; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    line-height: 2em;
+    /* margin: auto; */
+    /* background-color: blue; */
+    margin: auto;
+    width: 80%;
+    /* padding-top: 3vh; */
+  
+    /* font-style: italic; */
+  }
+  
+  

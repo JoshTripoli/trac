@@ -7,16 +7,33 @@
     <!-- <link rel="stylesheet" href="cssreset.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="papaparse.min.js"></script>
+    <style>
+    .pdfobject-container { height: 500px;}
+    .pdfobject { border: 1px solid #666; }
+    </style>
+
+
+
+
+
+
     <link rel="stylesheet" href="cssreset.css">
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="aboutStyle.css">
-    <link rel="stylesheet" href="fellowsStyle.css">
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="aboutStyle.css">
+    <link rel="stylesheet" href="fellowsStyle.css">
     <title>TRAC</title>
 </head>
 <body>
@@ -57,7 +74,7 @@
         </div>
     </div>
 
-    <div class="footer-container">
+    <!-- <div class="footer-container">
         <footer>
             <div id="social-media-footer">
                 <a href="https://www.instagram.com/lehightracfellows/?hl=en" class="soc" target="_blank"> <img src="images/instagramWhite.png" width="25" height="25"></a>
@@ -68,13 +85,82 @@
                 <p>© 2022 Lehigh University</p>
             </div>
         </footer>
+    </div> -->
+
+    <div class="container" style="padding:10px 10px;">
+    <div class="well">
+      <div class="row">
+      <form class="form-inline">
+        <div class="form-group">
+          <label for="files">Upload TRAC Fellow CSV file:</label>
+          <input type="file" id="files"  class="form-control" accept=".csv" required />
+        </div>
+        <div class="form-group">
+         <button type="submit" id="submit-file" class="btn btn-primary">Upload File</button>
+         </div>
+      </form>
+      </div>
+      <div class="row"
+        
+        <div class="row" id="parsed_csv_list">
+        </div>
+      </div>
+    </div>
     </div>
 
 
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
 
 </body>
 </html>
+
+
+
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#submit-file').on("click",function(e){
+		e.preventDefault();
+		$('#files').parse({
+			config: {
+				delimiter: "auto",
+				complete: displayHTMLTable,
+			},
+			before: function(file, inputElem)
+			{
+				//console.log("Parsing file...", file);
+			},
+			error: function(err, file)
+			{
+				//console.log("ERROR:", err, file);
+			},
+			complete: function()
+			{
+				//console.log("Done with all files");
+			}
+		});
+    });
+	
+	function displayHTMLTable(results){
+		var table = "<table class='table'>";
+		var data = results.data;
+		 
+		for(i=0;i<data.length;i++){
+			table+= "<tr>";
+			var row = data[i];
+			var cells = row.join(",").split(",");
+			 
+			for(j=0;j<cells.length;j++){
+				table+= "<td>";
+				table+= cells[j];
+				table+= "</th>";
+			}
+			table+= "</tr>";
+		}
+		table+= "</table>";
+		$("#parsed_csv_list").html(table);
+	}
+  });
+</script>

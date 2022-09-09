@@ -135,7 +135,6 @@ body{
     text-align: center;
 
   }
-
   
   .mybutton {
     position: relative;
@@ -215,16 +214,10 @@ footer {
 .pageContent p {
   text-align: left;
   padding-top: 1em;
-  /* margin-left: 3vw; */
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
   line-height: 2em;
-  /* margin: auto; */
-  /* background-color: blue; */
   margin: auto;
   width: 80%;
-  /* padding-top: 3vh; */
-
-  /* font-style: italic; */
 }
 
