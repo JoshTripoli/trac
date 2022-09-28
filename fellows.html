@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="cssreset.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
@@ -14,6 +13,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="papaparse.min.js"></script>
+
     <style>
     .pdfobject-container { height: 500px;}
     .pdfobject { border: 1px solid #666; }
@@ -87,28 +87,83 @@
         </footer>
     </div> -->
 
-    <div class="container" style="padding:10px 10px;">
-    <div class="well">
-      <div class="row">
-      <form class="form-inline">
-        <div class="form-group">
-          <label for="files">Upload TRAC Fellow CSV file:</label>
-          <input type="file" id="files"  class="form-control" accept=".csv" required />
-        </div>
-        <div class="form-group">
-         <button type="submit" id="submit-file" class="btn btn-primary">Upload File</button>
-         </div>
-      </form>
-      </div>
-      <div class="row"
-        
-        <div class="row" id="parsed_csv_list">
-        </div>
-      </div>
-    </div>
-    </div>
 
 
+    <h1>Learn CSV</h1>
+
+
+
+    
+
+    <div class="div-1" style="background-color:rgb(228, 252, 255)">
+      <p id="lin"> </p>
+      <p id="name"> </p>
+      <p id="pronouns"> </p>
+      <div id="imgDiv"> </div>
+      <!-- <img src="images/856318382.jpg" width="200"> -->
+      <!-- <p id="picture"> </p> -->
+      <p id="hometown"> </p>
+      <p id="year"> </p>
+      <p id="semester"> </p>
+      <p id="yearsIn"> </p>
+      <p id="majorMinor"> </p>
+      <p id="info"> </p>
+
+
+    </div>
+    <script>
+      var fellowCSV = `lin,name,pronouns,picture,hometown,year,semester,yearsIn,majorMinor,info
+856318382,Joss,they/them,856318382,Perkasie PA,2023,spring,2,Computer Science & Japanese,Hello! My name is Jay Piazza and I’m a junior majoring in psychology. I’m originally from Sacramento county and was drawn to Chico State because of its beautiful campus and surrounding landscape. I enjoy writing and building on my skills every year through various term papers especially those that relate to psychology. In my free time I enjoy watching movies playing video games and cooking. I look forward to working with students and helping them improve and gain confidence in their writing skills!
+123318382,Beyonce,she/her,images/123318382,Houston TX,2024,spring,3,Music,Hello! My name is Jay Piazza and I’m a junior majoring in psychology. I’m originally from Sacramento county and was drawn to Chico State because of its beautiful campus and surrounding landscape. I enjoy writing and building on my skills every year through various term papers especially those that relate to psychology. In my free time I enjoy watching movies playing video games and cooking. I look forward to working with students and helping them improve and gain confidence in their writing skills!
+55612382,JayZ,he/him,images/55612382,Brooklyn NY,2025,fall,1,Business,Hello! My name is Jay Piazza and I’m a junior majoring in psychology. I’m originally from Sacramento county and was drawn to Chico State because of its beautiful campus and surrounding landscape. I enjoy writing and building on my skills every year through various term papers especially those that relate to psychology. In my free time I enjoy watching movies playing video games and cooking. I look forward to working with students and helping them improve and gain confidence in their writing skills!`;
+
+
+      var arrObj = [];
+      var lines = fellowCSV.split('\n');
+      var headers = lines[0].split(',');
+
+      for (var i = 1; i < lines.length; i++)
+      {
+        var rowData = lines[i].split(',')
+        arrObj[i] = {};
+        for(var j = 0; j < rowData.length; j++)
+        {
+          arrObj[i][headers[j]] = rowData[j];
+        }
+      }
+
+      console.table(arrObj);
+
+
+      document.getElementById('imgDiv').innerHTML='<img src=\'images/' + arrObj[1].picture + '.jpg \'  width="200">'
+
+      document.getElementById('lin').innerHTML = arrObj[1].lin;
+      document.getElementById('name').innerHTML = arrObj[1].name;
+      document.getElementById('pronouns').innerHTML = arrObj[1].pronouns;
+      //document.getElementById('picture').innerHTML = arrObj[1].picture;
+      document.getElementById('hometown').innerHTML = arrObj[1].hometown;
+      document.getElementById('year').innerHTML = arrObj[1].year;
+      document.getElementById('semester').innerHTML = arrObj[1].semester;
+      document.getElementById('year').innerHTML = arrObj[1].year;
+      document.getElementById('yearsIn').innerHTML = arrObj[1].yearsIn;
+      document.getElementById('majorMinor').innerHTML = arrObj[1].majorMinor;
+      document.getElementById('info').innerHTML = arrObj[1].info;
+
+
+      //var val = arrObj[1].picture,
+       //   src = 'images/' + val +'.jpg',
+         // img = document.createElement('img');
+
+         // console.log("my src:");
+          //console.log(src);
+
+      //img.src = src;
+      //document.body.appendChild(img);
+
+
+
+    
+    </script>
 
 
 
@@ -119,30 +174,42 @@
 
 
 
+
+<!-- 
+
+
 <script type="text/javascript">
-  $(document).ready(function(){
-    $('#submit-file').on("click",function(e){
-		e.preventDefault();
-		$('#files').parse({
-			config: {
-				delimiter: "auto",
-				complete: displayHTMLTable,
-			},
-			before: function(file, inputElem)
-			{
-				//console.log("Parsing file...", file);
-			},
-			error: function(err, file)
-			{
-				//console.log("ERROR:", err, file);
-			},
-			complete: function()
-			{
-				//console.log("Done with all files");
-			}
-		});
+</script> -->
+
+
+
+
+
+
+
+<!-- 
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#submit-file').on("click", function (e) {
+      e.preventDefault();
+      $('#files').parse({
+        config: {
+          delimiter: "auto",
+          complete: displayHTMLTable,
+        },
+        before: function (file, inputElem) {
+          //console.log("Parsing file...", file);
+        },
+        error: function (err, file) {
+          //console.log("ERROR:", err, file);
+        },
+        complete: function () {
+          //console.log("Done with all files");
+        }
+      });
     });
-	
+
 	function displayHTMLTable(results){
 		var table = "<table class='table'>";
 		var data = results.data;
@@ -163,4 +230,4 @@
 		$("#parsed_csv_list").html(table);
 	}
   });
-</script>
+</script> -->
