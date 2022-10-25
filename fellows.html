@@ -142,6 +142,43 @@ var fellowCSV = `lin,name,pronouns,picture,hometown,year,semester,yearsIn,majorM
       console.table(arrObj);
 
 
+      for(let i = 1; i < arrObj.length; i++){
+        console.log("hello " + i);
+        //console.log(arrObj[i]);
+        var div = document.createElement('div');
+        div.className = 'fellow-profile';
+
+        //var h1 = document.createElement('h1');
+        //h1.innerText = "My title";
+
+
+        div.id = 'fellow-block' + i;
+        // console.log( 'fellow-block' + i)
+
+        console.log(arrObj[1].name);
+
+        //div.innerHTML = arrObj[i].name + " " 
+        //              + arrObj[i].pronouns + " "
+        //              + '<img src=\'images/' + arrObj[1].picture + '.jpg \'  width="200">';
+
+
+
+        // let tempName = arrObj[i].name;
+        // div.innerHTML =  String(tempName);
+        div.style.color = 'red';
+        document.body.appendChild(div);
+
+        // Name & Pronouns
+        var newh1 = document.createElement("h1");
+        newh1.innerHTML = arrObj[i].name + " (" + arrObj[i].pronouns + ")";
+        div.appendChild(newh1);
+
+        // Picture
+        var newImg = document.createElement("div");
+        newImg.innerHTML = '<img src=\'images/' + arrObj[1].picture + '.jpg \'  width="200">';
+        div.appendChild(newImg);
+        //document.getElementById("myText").innerHTML = number;
+      }
 
       document.getElementById('lin').innerHTML = arrObj[1].lin;
       document.getElementById('name').innerHTML = arrObj[1].name;
@@ -157,6 +194,7 @@ var fellowCSV = `lin,name,pronouns,picture,hometown,year,semester,yearsIn,majorM
       document.getElementById('info').innerHTML = arrObj[1].info;
 
 
+     
       //var val = arrObj[1].picture,
        //   src = 'images/' + val +'.jpg',
          // img = document.createElement('img');

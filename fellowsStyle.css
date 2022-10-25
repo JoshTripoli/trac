@@ -2,3 +2,10 @@
     position: absolute;
     bottom: 0;
 }
+.fellow-profile {
+    background-color: white;
+    margin: 20px;
+    /* vertical-align: middle;
+    display: flex;
+    align-items: center; */
+}
