@@ -9,3 +9,198 @@
     display: flex;
     align-items: center; */
 }
+
+
+.container {
+    /* background-color: rgb(197, 184, 209); /*Gallery bg color */
+    min-height: 500px;
+    max-width: 1224px;
+    margin: 0 auto; /*top bottom   left right */
+    display: flex; /*get inline*/
+    flex-wrap: wrap; /*wrap to next line if not enough space */
+    justify-content: space-between;
+    padding-top: 90px; /*margin bottom + min height 50 + 40 */
+    text-align: center;
+
+    /* background-color: rgb(255, 255, 255); */
+
+    /* background-image: url(images/gallery.svg);
+    background-color: #b000b9;
+    background-repeat: no-repeat; */
+    /* background-position: 0 top; */
+    /* background-size: 100%; */
+    /* overflow: visible; */
+    width: 100%;
+}
+
+.container img {
+    width: 300px;
+    height: 300px;
+    /* margin: 10px; */
+}
+
+
+/* .col img {
+    width: 100%;
+    height: auto;
+} */
+
+.col {
+    margin: 20px;
+}
+
+.col p::first-line {
+    font-weight: bold;
+}
+
+.col {
+    /*min-height: 200px;*/
+    width: 30%;
+    margin-bottom: 40px;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.col p {
+    /* color: white; */
+    font-size: 0.875rem;
+    padding: 20px 25px;
+    line-height: 0.825rem;
+}
+
+/* .col .whitebg {
+    background-color: white;
+} */
+
+.col img:hover {
+    /* background-color: white; */
+    /* filter: blur(5px);
+    filter: brightness(0.4);
+    filter: contrast(200%);
+    filter: drop-shadow(16px 16px 20px blue);
+    filter: grayscale(50%);
+    filter: hue-rotate(90deg);
+    filter: invert(75%);
+    filter: opacity(25%);
+    filter: saturate(30%);
+    filter: sepia(60%); */
+    /* background: rgba(255, 255, 255, 0.5); */
+    opacity: 0.5;
+    transition: background .3s linear;
+}
+
+
+
+/*Small desktop no social media  View*/
+@media (max-width: 1300px){
+    #mlogo {
+        /* display: none; */
+    }
+
+    #social-media {
+        left: 0; 
+        right: 0; 
+        top: 0;
+        margin-left: auto; 
+        margin-right: auto; 
+        width: 180px;
+    }
+}
+/*Tablet View*/
+@media (max-width: 768px){
+    .col {
+        width: 47% /*width that allows for 2 boxers in a row*/
+    }
+
+    .hide-desktop-only {
+        display: block;
+    }
+
+    /* simple css only change layout for mobile */
+    /* header {                     for other style of site
+        display: block;
+        text-align: center;
+    } */
+
+    nav {
+        display: none;
+    }
+
+   /* All below for resize nav into rows for avoiding burger menu */
+    nav a {
+        display: block;
+    } 
+
+    .logo {
+        padding: 40px 0;
+    }
+
+    .mybutton {
+        margin-left: 0;
+    }
+
+    .header-container{
+        position: relative;
+    }
+
+    .container {
+        padding-top: 40px; 
+    }  
+
+     .mob-wrapper {
+        display: block; 
+        padding-right: 30px;
+    } 
+
+    .mob-nav {
+        display: none; /*default on. turn on with javascript*/
+        position: absolute; /*only acknowledge parents*/
+        padding-top: 10px;
+    }
+
+    .navbutton {
+        display: block;
+        background-color: rgb(138, 5, 5);
+        padding: 15px 30px;
+        margin-left: -70px;
+        text-align: center;
+    }
+
+    #name-hide {
+        display: none;
+    }
+
+    #mlogo {
+        position: absolute;
+        
+        /* left: 0; 
+        right: 0; 
+        top: 0;
+        margin-left: auto; 
+        margin-right: auto; 
+        width: 180px;
+        height: 180px; */
+    }
+
+    #social-media {
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+/*Mobile View*/
+@media (max-width: 400px){
+    .col {
+        width: 100%
+    }
+
+    .hide-mobile-only {
+        display: none;
+    }
+
+    /* .mob-wrapper {
+        display: block; 
+    } */
+}
