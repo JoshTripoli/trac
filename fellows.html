@@ -224,7 +224,7 @@ var fellowCSV = `lin,name,pronouns,picture,hometown,year,semester,yearsIn,majorM
 
         // let tempName = arrObj[i].name;
         // div.innerHTML =  String(tempName);
-        div.style.color = 'red';
+        // div.style.color = 'red';
         document.body.appendChild(div);
 
         // Name & Pronouns
@@ -238,20 +238,42 @@ var fellowCSV = `lin,name,pronouns,picture,hometown,year,semester,yearsIn,majorM
         div.appendChild(newImg);
         //document.getElementById("myText").innerHTML = number;
 
+        // Year header bold
+        var gradYearHeader = document.createElement("h2");
+        gradYearHeader.innerHTML = "Year: ";
+        gradYearHeader.style.fontWeight = 'bold';
+        div.appendChild(gradYearHeader);
+
         // Year
-        var gradYear = document.createElement("h2");
-        gradYear.innerHTML = "Year: " + arrObj[i].year;
-        div.appendChild(gradYear);
+        var gradYear = document.createElement("span");
+        gradYear.innerHTML = arrObj[i].year;
+        gradYear.style.fontWeight = 'normal';
+        gradYearHeader.appendChild(gradYear);
+
+        // Major minor header bold
+        var majorMinorHeader = document.createElement("h2");
+        majorMinorHeader.innerHTML = "Major/Minor: ";
+        majorMinorHeader.style.fontWeight = 'bold';
+        div.appendChild(majorMinorHeader);
         
         // Major and Minor
-        var majorMinor = document.createElement("h2");
-        majorMinor.innerHTML = "Major/Minor: " + arrObj[i].majorMinor.replaceAll('"', '');;
-        div.appendChild(majorMinor);
+        var majorMinor = document.createElement("span");
+        majorMinor.innerHTML = arrObj[i].majorMinor.replaceAll('"', '');
+        majorMinor.style.fontWeight = 'normal';
+        majorMinorHeader.appendChild(majorMinor);
 
-        // Fellow bio information
-        var info = document.createElement("p");
-        info.innerHTML = "About: " + arrObj[i].info.replaceAll('"', '');;
-        div.appendChild(info);
+        // About
+        var aboutHeader = document.createElement("h2");
+        aboutHeader.innerHTML = "About: ";
+        aboutHeader.className = "about-text";
+        aboutHeader.style.fontWeight = 'bold';
+        div.appendChild(aboutHeader);
+                
+        // Fellow about information
+        var aboutInfo = document.createElement("span");
+        aboutInfo.innerHTML = arrObj[i].info.replaceAll('"', '');
+        aboutInfo.style.fontWeight = 'normal';
+        aboutHeader.appendChild(aboutInfo);
 
         $('.container').prepend(div);
       }

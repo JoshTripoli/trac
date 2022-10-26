@@ -44,6 +44,23 @@
     width: 100%;
 }
 
+.about-text {
+    /* background-color: green; */
+}
+.col h2, p {
+    text-align: left;
+    /* background-color: rgb(0, 0, 0);
+    color: white; */
+
+}
+
+.col h1 {
+    font-weight: bold;
+    font-size: 1.75em;
+    padding: .25em;
+    /* background-color: #423BCC; */
+    /* color: white; */
+}
 .container img {
     width: 300px;
     height: 300px;
@@ -96,8 +113,10 @@
     filter: saturate(30%);
     filter: sepia(60%); */
     /* background: rgba(255, 255, 255, 0.5); */
-    opacity: 0.5;
-    transition: background .3s linear;
+
+
+    /* opacity: 0.5;
+    transition: background .3s linear; */
 }
 
 
