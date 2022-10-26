@@ -70,16 +70,16 @@
 
     <div class="tab">
       <button class="tablinks" id="lt-tab" onclick="handleTabClick('LT')">LT</button>
-      <button class="tablinks" id="bus3-tab" onclick="handleTabClick('BUS3')">BUS 003</button>
-      <button class="tablinks" id="engr5-tab" onclick="handleTabClick('ENGR5')">ENGR 005</button>
-     <!--  <button class="tablinks" onclick="handleTabClick()">ANTH 320</button>
-      <button class="tablinks" onclick="handleTabClick()">ENGL 001</button>
-      <button class="tablinks" onclick="handleTabClick()">MLL 090</button>
-      <button class="tablinks" onclick="handleTabClick()">REL 090 </button>
-      <button class="tablinks" onclick="handleTabClick()">PSYCH 203</button>
-      <button class="tablinks" onclick="handleTabClick()">SOC 313</button>
-      <button class="tablinks" onclick="handleTabClick()">CEE/EES 379</button>
-      <button class="tablinks" onclick="handleTabClick()">Niche</button> -->
+      <button class="tablinks" id="BUS3-tab" onclick="handleTabClick('BUS3')">BUS 003</button>
+      <button class="tablinks" id="ENGR5-tab" onclick="handleTabClick('ENGR5')">ENGR 005</button>
+      <button class="tablinks" id="ANTH320-tab" onclick="handleTabClick('ANTH320')">ANTH 320</button>
+      <button class="tablinks" id="ENGL1-tab" onclick="handleTabClick('ENGL1')">ENGL 001</button>
+      <button class="tablinks" id="MLL90-tab" onclick="handleTabClick('MLL90')">MLL 090</button>
+      <button class="tablinks" id="REL90-tab" onclick="handleTabClick('REL90')">REL 090</button>
+      <button class="tablinks" id="PSYCH203-tab" onclick="handleTabClick('PSYCH203')">PSYCH 203</button>
+      <button class="tablinks" id="SOC313-tab" onclick="handleTabClick('SOC313')">SOC 313</button>
+      <button class="tablinks" id="CEE379-tab" onclick="handleTabClick('CEE379')">CEE/EES 379</button>
+      <button class="tablinks" id="Niche-tab" onclick="handleTabClick('Niche')">Niche</button> 
     </div>
     
 
@@ -126,6 +126,70 @@
 
           location.reload();
 
+        } else if (selectedTab === 'ANTH320'){
+          console.log("ANTH320 clicked!!");
+          //activeCSV = "ENGR5";
+          //title.innerHTML = "ENGR 005 Fellows";
+          localStorage.setItem("tabToDisplay", "ANTH 320 Fellows");
+
+          location.reload();
+
+        } else if (selectedTab === 'ENGL1'){
+          console.log("ENGL1 clicked!!");
+          //activeCSV = "ENGR5";
+          //title.innerHTML = "ENGR 005 Fellows";
+          localStorage.setItem("tabToDisplay", "ENGL 001 Fellows");
+
+          location.reload();
+
+        } else if (selectedTab === 'MLL90'){
+          console.log("MLL90 clicked!!");
+          //activeCSV = "ENGR5";
+          //title.innerHTML = "ENGR 005 Fellows";
+          localStorage.setItem("tabToDisplay", "MLL 090 Fellows");
+
+          location.reload();
+
+        } else if (selectedTab === 'REL90'){
+          console.log("REL90 clicked!!");
+          //activeCSV = "ENGR5";
+          //title.innerHTML = "ENGR 005 Fellows";
+          localStorage.setItem("tabToDisplay", "REL 090 Fellows");
+
+          location.reload();
+
+        } else if (selectedTab === 'PSYCH203'){
+          console.log("PSYCH203 clicked!!");
+          //activeCSV = "ENGR5";
+          //title.innerHTML = "ENGR 005 Fellows";
+          localStorage.setItem("tabToDisplay", "PSYCH 203 Fellows");
+
+          location.reload();
+
+        } else if (selectedTab === 'SOC313'){
+          console.log("SOC313 clicked!!");
+          //activeCSV = "ENGR5";
+          //title.innerHTML = "ENGR 005 Fellows";
+          localStorage.setItem("tabToDisplay", "SOC 313 Fellows");
+
+          location.reload();
+
+        } else if (selectedTab === 'CEE379'){
+          console.log("CEE379 clicked!!");
+          //activeCSV = "ENGR5";
+          //title.innerHTML = "ENGR 005 Fellows";
+          localStorage.setItem("tabToDisplay", "CEE/EES 379 Fellows");
+
+          location.reload();
+
+        } else if (selectedTab === 'Niche'){
+          console.log("Niche clicked!!");
+          //activeCSV = "ENGR5";
+          //title.innerHTML = "ENGR 005 Fellows";
+          localStorage.setItem("tabToDisplay", "Niche Fellows");
+
+          location.reload();
+
         } else {
           // default to LT
           console.log("default!!");
@@ -142,9 +206,19 @@
       import {BUS3} from './fellowData/BUS3.js'
       import {ENGR5} from './fellowData/ENGR5.js'
 
+      import {ANTH320} from './fellowData/ANTH320.js'
+      import {ENGL1} from './fellowData/ENGL1.js'
+      import {MLL90} from './fellowData/MLL90.js'
+      import {REL90} from './fellowData/REL90.js'
+      import {PSYCH203} from './fellowData/PSYCH203.js'
+      import {SOC313} from './fellowData/SOC313.js'
+      import {CEE379} from './fellowData/CEE379.js'
+      import {Niche} from './fellowData/Niche.js'
+
 
       
 
+      
       // default fellows
       const title = document.getElementById('classTitle');
       title.innerHTML = localStorage.getItem("tabToDisplay");
@@ -153,20 +227,56 @@
       let fellowCSV = "";
 
       if(localStorage.getItem("tabToDisplay") === "BUS 003 Fellows"){
-        const makeENGR5Gray = document.getElementById('bus3-tab');
-        makeENGR5Gray.style.backgroundColor = "#ccc";
+        const makeBUS3Gray = document.getElementById('BUS3-tab');
+        makeBUS3Gray.style.backgroundColor = "#ccc";
         fellowCSV = BUS3;
         console.log("in herree beyonce fellowCSV");
       } else if (localStorage.getItem("tabToDisplay")  === "ENGR 005 Fellows") {
-        const makeENGR5Gray = document.getElementById('engr5-tab');
+        const makeENGR5Gray = document.getElementById('ENGR5-tab');
         makeENGR5Gray.style.backgroundColor = "#ccc";
         fellowCSV = ENGR5;
       }else if (localStorage.getItem("tabToDisplay") === "Leadership Team"){
-        // default LT
         const makeLTGray = document.getElementById('lt-tab');
         makeLTGray.style.backgroundColor = "#ccc";
 
         fellowCSV = LT;
+      } else if (localStorage.getItem("tabToDisplay")  === "ANTH 320 Fellows") {
+        const makeANTH320Gray = document.getElementById('ANTH320-tab');
+        makeANTH320Gray.style.backgroundColor = "#ccc";
+        fellowCSV = ANTH320;
+      }else if (localStorage.getItem("tabToDisplay") === "ENGL 001 Fellows"){
+        const makeENGL1Gray = document.getElementById('ENGL1-tab');
+        makeENGL1Gray.style.backgroundColor = "#ccc";
+
+        fellowCSV = ENGL1;
+      } else if (localStorage.getItem("tabToDisplay")  === "MLL 090 Fellows") {
+        const makeMLL90Gray = document.getElementById('MLL90-tab');
+        makeMLL90Gray.style.backgroundColor = "#ccc";
+        fellowCSV = MLL90;
+      }else if (localStorage.getItem("tabToDisplay") === "REL 090 Fellows"){
+        const makeREL90Gray = document.getElementById('REL90-tab');
+        makeREL90Gray.style.backgroundColor = "#ccc";
+
+        fellowCSV = REL90;
+      } else if (localStorage.getItem("tabToDisplay")  === "PSYCH 203 Fellows") {
+        const makePSYCH203Gray = document.getElementById('PSYCH203-tab');
+        makePSYCH203Gray.style.backgroundColor = "#ccc";
+        fellowCSV = PSYCH203;
+      }else if (localStorage.getItem("tabToDisplay") === "SOC 313 Fellows"){
+        // default LT
+        const makeSOC313Gray = document.getElementById('SOC313-tab');
+        makeSOC313Gray.style.backgroundColor = "#ccc";
+
+        fellowCSV = SOC313;
+      } else if (localStorage.getItem("tabToDisplay")  === "CEE/EES 379 Fellows") {
+        const makeCEE379Gray = document.getElementById('CEE379-tab');
+        makeCEE379Gray.style.backgroundColor = "#ccc";
+        fellowCSV = CEE379;
+      }else if (localStorage.getItem("tabToDisplay") === "Niche Fellows"){
+        const makeNicheGray = document.getElementById('Niche-tab');
+        makeNicheGray.style.backgroundColor = "#ccc";
+
+        fellowCSV = Niche;
       } 
       
       console.log("What is this?");
@@ -174,7 +284,7 @@
       console.log(fellowCSV);
       
 
-     /** function handleTabClick() {
+     /** function handleTabClick('MLL90') {
         alert("hello");
       }*/
       
