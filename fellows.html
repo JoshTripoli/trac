@@ -90,92 +90,10 @@
         </div>
     </div>
 
-   
-    
-<!-- 
-    <div class="div-1" style="background-color:white">
-      <p id="lin"> </p>
-      <p id="name"> </p>
-      <p id="pronouns"> </p>
-      <div id="imgDiv"> </div>
-      <img src="images/856318382.jpg" width="200"> 
-      <p id="picture"> </p> 
-      <p id="hometown"> </p>
-      <p id="year"> </p>
-      <p id="semester"> </p>
-      <p id="yearsIn"> </p>
-      <p id="majorMinor"> </p>
-      <p id="info"> </p>
-
-
-    </div>-->
-
-
-    <!-- <div class="container">
-      <div class="col"><div class=whitebg><img src="images/resized/FI2M-x1WYAMqgAE (1).png" alt="pic1"></div>
-          <p>Title: Fauna of La Venta Informational Graphics</p>
-      </div>
-      <div class="col"><div class=whitebg><img src="images/resized/FEhLn6zXsAMZDYS.png" alt="pic2"></div>
-          <p>Title: Fauna of La Venta Informational Graphics</p>
-      </div>
-      <div class="col"><div class=whitebg><img src="images/resized/visessay_gallery.jpg" alt="pic3"></div>
-          <p>Title: Fauna of La Venta Informational Graphics</p>
-      </div>
-      <div class="col"><div class=whitebg><img src="images/resized/FI2NASTWUAA4E7y.png" alt="pic4"></div>
-          <p>Title: Fauna of La Venta Informational Graphics</p>
-      </div>
-      <div class="col hide-mobile-only"><div class=whitebg><img src="images/resized/FI2NAxHWQAUBQWd.png" alt="pic5"></div>
-          <p>Title: Fauna of La Venta Informational Graphics</p>
-      </div>
-      <div class="col hide-mobile-only"><div class=whitebg><img src="images/resized/FIMVIDOWUAARbdq (1).png" alt="pic6"></div>
-          <p>Title: Fauna of La Venta Informational Graphics</p>
-      </div>
-      <div class="col hide-mobile-only"><div class=whitebg><img src="images/resized/Ey5BccCWYAA8Rr3.png" alt="pic7"></div>
-          <p>Title: Fauna of La Venta Informational Graphics</p>
-      </div>
-      <div class="col hide-mobile-only"><div class=whitebg><img src="images/resized/mag_gallery.jpg" alt="pic8"></div>
-          <p>Title: Fauna of La Venta Informational Graphics</p>
-      </div>
-      <div class="col hide-mobile-only"><div class=whitebg><img src="images/resized/spd_gallery.jpg" alt="pic9"></div>
-          <p>Title: Fauna of La Venta Informational Graphics</p>
-      </div>
-      <div class="col hide-mobile-only hide-desktop-only"><div class=whitebg><img src="images/resized/symbio_gallery.jpg" alt="pic10"></div>
-          <p>Title: Fauna of La Venta Informational Graphics</p>
-      </div>
-  </div> -->
-
+  
 
     <div class="container">
-      <!-- <div class="col"><div class=whitebg><img src="images/856318382.jpg" alt="pic1"></div>
-          <p>Title: Fauna of La Venta Informational Graphics</p>
-      </div>
-      <div class="col"><div class=whitebg><img src="images/856318382.jpg" alt="pic2"></div>
-          <p>Title: Fauna of La Venta Informational Graphics</p>
-      </div>
-      <div class="col"><div class=whitebg><img src="images/856318382.jpg" alt="pic3"></div>
-          <p>Title: Fauna of La Venta Informational Graphics</p>
-      </div>
-      <div class="col"><div class=whitebg><img src="images/856318382.jpg" alt="pic4"></div>
-          <p>Title: Fauna of La Venta Informational Graphics</p>
-      </div>
-      <div class="col hide-mobile-only"><div class=whitebg><img src="images/856318382.jpg" alt="pic5"></div>
-          <p>Title: Fauna of La Venta Informational Graphics</p>
-      </div>
-      <div class="col hide-mobile-only"><div class=whitebg><img src="images/856318382.jpg" alt="pic6"></div>
-          <p>Title: Fauna of La Venta Informational Graphics</p>
-      </div>
-      <div class="col hide-mobile-only"><div class=whitebg><img src="images/856318382.jpg" alt="pic7"></div>
-          <p>Title: Fauna of La Venta Informational Graphics</p>
-      </div>
-      <div class="col hide-mobile-only"><div class=whitebg><img src="images/856318382.jpg" alt="pic8"></div>
-          <p>Title: Fauna of La Venta Informational Graphics</p>
-      </div>
-      <div class="col hide-mobile-only"><div class=whitebg><img src="images/856318382.jpg" alt="pic9"></div>
-          <p>Title: Fauna of La Venta Informational Graphics</p>
-      </div>
-      <div class="col hide-mobile-only hide-desktop-only"><div class=whitebg><img src="images/856318382.jpg" alt="pic10"></div>
-          <p>Title: Fauna of La Venta Informational Graphics</p>
-      </div> -->
+
   </div>
   
 
@@ -324,6 +242,12 @@
         // div.innerHTML =  String(tempName);
         // div.style.color = 'red';
         document.body.appendChild(div);
+
+        // Blue upper half box
+        var blueBox = document.createElement("div");
+        blueBox.innerHTML = " ";
+        blueBox.className = "upper-blue-half";
+        div.appendChild(blueBox);
 
         // Name & Pronouns
         var namePronouns = document.createElement("h1");
