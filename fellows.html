@@ -69,9 +69,9 @@
     </div>
 
     <div class="tab">
-      <button class="tablinks" onclick="handleTabClick('LT')">LT</button>
-      <button class="tablinks" onclick="handleTabClick('BUS3')">BUS 003</button>
-      <button class="tablinks" onclick="handleTabClick('ENGR5')">ENGR 005</button>
+      <button class="tablinks" id="lt-tab" onclick="handleTabClick('LT')">LT</button>
+      <button class="tablinks" id="bus3-tab" onclick="handleTabClick('BUS3')">BUS 003</button>
+      <button class="tablinks" id="engr5-tab" onclick="handleTabClick('ENGR5')">ENGR 005</button>
      <!--  <button class="tablinks" onclick="handleTabClick()">ANTH 320</button>
       <button class="tablinks" onclick="handleTabClick()">ENGL 001</button>
       <button class="tablinks" onclick="handleTabClick()">MLL 090</button>
@@ -86,7 +86,7 @@
     <div class="pageContent">
 
         <div class="innerWhiteBox">
-            <h1 id="classTitle"></h1>
+            <h1 id="classTitle">‎</h1>
         </div>
     </div>
 
@@ -185,31 +185,35 @@
       // setter
       function handleTabClick(selectedTab) {
         const title = document.getElementById('classTitle');
+
         if(selectedTab === 'LT'){
           //console.log("LT clicked!!");
           //title.innerHTML = "Leadership Team";
-          activeCSV = "LT";
-          localStorage.setItem("tabToDisplay", "LT");
+          //activeCSV = "LT";
+          localStorage.setItem("tabToDisplay", "Leadership Team");
+         
           location.reload();
         } else if (selectedTab === 'BUS3') {
           console.log("BUS3 clicked!!");
           activeCSV = "BUS3";
          // title.innerHTML = "BUS 003 Fellows";
-          localStorage.setItem("tabToDisplay", "BUS3");
+          localStorage.setItem("tabToDisplay", "BUS 003 Fellows");
+
           location.reload();
         } else if (selectedTab === 'ENGR5'){
           console.log("ENGR5 clicked!!");
-          activeCSV = "ENGR5";
+          //activeCSV = "ENGR5";
           //title.innerHTML = "ENGR 005 Fellows";
-          localStorage.setItem("tabToDisplay", "ENGR 005");
+          localStorage.setItem("tabToDisplay", "ENGR 005 Fellows");
+
           location.reload();
 
         } else {
           // default to LT
           console.log("default!!");
-          activeCSV = "LT";
+          //activeCSV = "LT";
         }
-        return activeCSV;
+        //return activeCSV;
       }
       // getter
     </script>
@@ -230,13 +234,20 @@
       let active = "";
       let fellowCSV = "";
 
-      if(localStorage.getItem("tabToDisplay") === "BUS3"){
+      if(localStorage.getItem("tabToDisplay") === "BUS 003 Fellows"){
+        const makeENGR5Gray = document.getElementById('bus3-tab');
+        makeENGR5Gray.style.backgroundColor = "#ccc";
         fellowCSV = BUS3;
         console.log("in herree beyonce fellowCSV");
-      } else if (localStorage.getItem("tabToDisplay")  === "ENGR 005") {
+      } else if (localStorage.getItem("tabToDisplay")  === "ENGR 005 Fellows") {
+        const makeENGR5Gray = document.getElementById('engr5-tab');
+        makeENGR5Gray.style.backgroundColor = "#ccc";
         fellowCSV = ENGR5;
-      }else if (localStorage.getItem("tabToDisplay") === "LT"){
+      }else if (localStorage.getItem("tabToDisplay") === "Leadership Team"){
         // default LT
+        const makeLTGray = document.getElementById('lt-tab');
+        makeLTGray.style.backgroundColor = "#ccc";
+
         fellowCSV = LT;
       } 
       
