@@ -47,11 +47,15 @@
 .about-text {
     /* background-color: green; */
 }
+
 .col h2, p {
     text-align: left;
     /* background-color: rgb(0, 0, 0);
     color: white; */
+}
 
+.footer-container h2, p {
+    text-align: center;
 }
 
 .col h1 {

@@ -173,10 +173,10 @@
 55612382,JayZ,he/him,images/55612382,Brooklyn NY,2025,fall,1,Business,Hello! My name is Jay Piazza and I’m a junior majoring in psychology. I’m originally from Sacramento county and was drawn to Chico State because of its beautiful campus and surrounding landscape. I enjoy writing and building on my skills every year through various term papers especially those that relate to psychology. In my free time I enjoy watching movies playing video games and cooking. I look forward to working with students and helping them improve and gain confidence in their writing skills!`;
 */
 var fellowCSV = `lin,name,pronouns,picture,hometown,year,semester,yearsIn,majorMinor,info
-856318382,Joss,they/them,856318382,"Perkasie, PA",2023,spring,2,"Computer Science, Japanese","Hello! My name is Jay Piazza and I’m a junior majoring in psychology. I’m originally from Sacramento county and was drawn to Chico State because of its beautiful campus and surrounding landscape. I enjoy writing and building on my skills every year through various term papers, especially those that relate to psychology. In my free time I enjoy watching movies, playing video games, and cooking. I look forward to working with students and helping them improve and gain confidence in their writing skills!"
-123318382,Beyonce,she/her,123318382,"Houston, TX",2024,spring,3,Music,"Hello! My name is Jay Piazza and I’m a junior majoring in psychology. I’m originally from Sacramento county and was drawn to Chico State because of its beautiful campus and surrounding landscape. I enjoy writing and building on my skills every year through various term papers, especially those that relate to psychology. In my free time I enjoy watching movies, playing video games, and cooking. I look forward to working with students and helping them improve and gain confidence in their writing skills!"
-55612382,JayZ,he/him,55612382,"Brooklyn, NY",2025,fall,1,Business,"Hello! My name is Jay Piazza and I’m a junior majoring in psychology. I’m originally from Sacramento county and was drawn to Chico State because of its beautiful campus and surrounding landscape. I enjoy writing and building on my skills every year through various term papers, especially those that relate to psychology. In my free time I enjoy watching movies, playing video games, and cooking. I look forward to working with students and helping them improve and gain confidence in their writing skills!"
-856318382,Joss,they/them,856318382,"Perkasie, PA",2023,spring,2,"Computer Science, Japanese","Hello! My name is Jay Piazza and I’m a junior majoring in psychology. I’m originally from Sacramento county and was drawn to Chico State because of its beautiful campus and surrounding landscape. I enjoy writing and building on my skills every year through various term papers, especially those that relate to psychology. In my free time I enjoy watching movies, playing video games, and cooking. I look forward to working with students and helping them improve and gain confidence in their writing skills!"
+856318382,"Joss Tripoli",they/them,856318382,"Perkasie, PA",2023,spring,2,"Computer Science, Japanese","Hello! My name is Jay Piazza and I’m a junior majoring in psychology. I’m originally from Sacramento county and was drawn to Chico State because of its beautiful campus and surrounding landscape. I enjoy writing and building on my skills every year through various term papers, especially those that relate to psychology. In my free time I enjoy watching movies, playing video games, and cooking. I look forward to working with students and helping them improve and gain confidence in their writing skills!"
+123318382,"Beyonce Knowles",she/her,123318382,"Houston, TX",2024,spring,3,Music,"Hello! My name is Jay Piazza and I’m a junior majoring in psychology. I’m originally from Sacramento county and was drawn to Chico State because of its beautiful campus and surrounding landscape. I enjoy writing and building on my skills every year through various term papers, especially those that relate to psychology. In my free time I enjoy watching movies, playing video games, and cooking. I look forward to working with students and helping them improve and gain confidence in their writing skills!"
+55612382,"Jay Z",he/him,55612382,"Brooklyn, NY",2025,fall,1,Business,"Hello! My name is Jay Piazza and I’m a junior majoring in psychology. I’m originally from Sacramento county and was drawn to Chico State because of its beautiful campus and surrounding landscape. I enjoy writing and building on my skills every year through various term papers, especially those that relate to psychology. In my free time I enjoy watching movies, playing video games, and cooking. I look forward to working with students and helping them improve and gain confidence in their writing skills!"
+856318382,Sunny,they/them,856318382,"Perkasie, PA",2023,spring,2,"Computer Science, Japanese","Hello! My name is Jay Piazza and I’m a junior majoring in psychology. I’m originally from Sacramento county and was drawn to Chico State because of its beautiful campus and surrounding landscape. I enjoy writing and building on my skills every year through various term papers, especially those that relate to psychology. In my free time I enjoy watching movies, playing video games, and cooking. I look forward to working with students and helping them improve and gain confidence in their writing skills!"
 856318382,Bob,they/them,856318382,"Perkasie, PA",2023,spring,2,"Computer Science, Japanese","Hello! My name is Jay Piazza and I’m a junior majoring in psychology. I’m originally from Sacramento county and was drawn to Chico State because of its beautiful campus and surrounding landscape. I enjoy writing and building on my skills every year through various term papers, especially those that relate to psychology. In my free time I enjoy watching movies, playing video games, and cooking. I look forward to working with students and helping them improve and gain confidence in their writing skills!"
 856318382,Ally,they/them,856318382,"Perkasie, PA",2023,spring,2,"Computer Science, Japanese","Hello! My name is Jay Piazza and I’m a junior majoring in psychology. I’m originally from Sacramento county and was drawn to Chico State because of its beautiful campus and surrounding landscape. I enjoy writing and building on my skills every year through various term papers, especially those that relate to psychology. In my free time I enjoy watching movies, playing video games, and cooking. I look forward to working with students and helping them improve and gain confidence in their writing skills!"`;
 
@@ -229,7 +229,7 @@ var fellowCSV = `lin,name,pronouns,picture,hometown,year,semester,yearsIn,majorM
 
         // Name & Pronouns
         var namePronouns = document.createElement("h1");
-        namePronouns.innerHTML = arrObj[i].name + " (" + arrObj[i].pronouns + ")";
+        namePronouns.innerHTML = arrObj[i].name.replaceAll('"', '');;
         div.appendChild(namePronouns);
 
         // Picture
@@ -237,6 +237,20 @@ var fellowCSV = `lin,name,pronouns,picture,hometown,year,semester,yearsIn,majorM
         newImg.innerHTML = '<img src=\'images/' + arrObj[1].picture + '.jpg \'  width="200">';
         div.appendChild(newImg);
         //document.getElementById("myText").innerHTML = number;
+
+        
+        // Pronouns header bold
+        var pronounHeader = document.createElement("h2");
+        pronounHeader.innerHTML = "Pronouns: ";
+        pronounHeader.style.fontWeight = 'bold';
+        div.appendChild(pronounHeader);
+
+        // Pronouns
+        var pronouns = document.createElement("span");
+        pronouns.innerHTML = arrObj[i].pronouns;
+        pronouns.style.fontWeight = 'normal';
+        pronounHeader.appendChild(pronouns);
+
 
         // Year header bold
         var gradYearHeader = document.createElement("h2");
@@ -275,7 +289,7 @@ var fellowCSV = `lin,name,pronouns,picture,hometown,year,semester,yearsIn,majorM
         aboutInfo.style.fontWeight = 'normal';
         aboutHeader.appendChild(aboutInfo);
 
-        $('.container').prepend(div);
+        $('.container').append(div);
       }
 
       document.getElementById('lin').innerHTML = arrObj[1].lin;
