@@ -51,13 +51,13 @@
                     <a href="about.html">About Us</a>
                   </div>
                   <div class="mybutton">
+                    <a href="fellows.html">Meet the Fellows</a>
+                  </div>
+                  <div class="mybutton">
                     <a href="classes.html">Classes We TRAC</a>
                   </div>
                   <div class="mybutton">
                     <a href="faculty.html">Faculty Support</a>
-                  </div>
-                  <div class="mybutton">
-                    <a href="fellows.html">Meet the Fellows</a>
                   </div>
                   <div class="mybutton">
                     <a href="sitemap.html">Site Map</a>
@@ -354,10 +354,10 @@
         document.body.appendChild(div);
 
         // Blue upper half box
-        var blueBox = document.createElement("div");
-        blueBox.innerHTML = " ";
-        blueBox.className = "upper-blue-half";
-        div.appendChild(blueBox);
+        //var blueBox = document.createElement("div");
+       // blueBox.innerHTML = " ";
+        //blueBox.className = "upper-blue-half";
+        //div.appendChild(blueBox);
 
         // Name & Pronouns
         var namePronouns = document.createElement("h1");
@@ -383,10 +383,22 @@
         pronouns.style.fontWeight = 'normal';
         pronounHeader.appendChild(pronouns);
 
+        // Hometown header bold
+        var hometownHeader = document.createElement("h2");
+        hometownHeader.innerHTML = "Hometown: ";
+        hometownHeader.style.fontWeight = 'bold';
+        div.appendChild(hometownHeader);
+
+        // Hometown
+        var hometowns = document.createElement("span");
+        hometowns.innerHTML = arrObj[i].hometown.replaceAll('"', '');
+        hometowns.style.fontWeight = 'normal';
+        hometownHeader.appendChild(hometowns);
+
 
         // Year header bold
         var gradYearHeader = document.createElement("h2");
-        gradYearHeader.innerHTML = "Year: ";
+        gradYearHeader.innerHTML = "Class Year: ";
         gradYearHeader.style.fontWeight = 'bold';
         div.appendChild(gradYearHeader);
 

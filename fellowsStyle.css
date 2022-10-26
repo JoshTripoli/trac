@@ -1,3 +1,10 @@
+.col:hover {
+    /* box-shadow: 0 0 15px rgba(33,33,33,.6);  */
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+
+}
+
+
 /* Style the tab */
 .tab {
     overflow: hidden;
@@ -43,6 +50,7 @@
     margin-bottom: -60px;
     background-color: #110F34;
     color: white;
+    
 }
 
 
@@ -109,6 +117,22 @@
     background-color: rgb(255, 255, 255);
 }
 
+.col img {
+    margin-top: 0.5em;
+}
+
+.col .about-text {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-size: 1.22em; */
+    line-height: 1.5em;
+}
+.col h2 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+
+}
 
 .col h2, p {
     text-align: left;
