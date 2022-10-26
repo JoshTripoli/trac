@@ -1,7 +1,18 @@
 .footer-container {
-    position: absolute;
+    position: relative;
     bottom: 0;
 }
+
+#page-container {
+    position: relative;
+    height: 100vh;
+  }
+  
+  #content-wrap {
+    padding-bottom: 4rem;    /* Footer height */
+  }
+
+  
 .fellow-profile {
     background-color: white;
     margin: 20px;
@@ -204,3 +215,4 @@
         display: block; 
     } */
 }
+
