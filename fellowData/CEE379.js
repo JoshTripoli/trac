@@ -1,7 +1,18 @@
-export const CEE379 = `lin,name,pronouns,picture,hometown,year,semester,yearsIn,majorMinor,info
-856318382,"CEE379 FELLOW",they/them,856318382,"Perkasie, PA",2023,spring,2,"Computer Science, Japanese","Hello! My name is Jay Piazza and I’m a junior majoring in psychology. I’m originally from Sacramento county and was drawn to Chico State because of its beautiful campus and surrounding landscape. I enjoy writing and building on my skills every year through various term papers, especially those that relate to psychology. In my free time I enjoy watching movies, playing video games, and cooking. I look forward to working with students and helping them improve and gain confidence in their writing skills!"
-123318382,"CEE379 FELLOW 2",she/her,123318382,"Houston, TX",2024,spring,3,Music,"Hello! My name is Jay Piazza and I’m a junior majoring in psychology. I’m originally from Sacramento county and was drawn to Chico State because of its beautiful campus and surrounding landscape. I enjoy writing and building on my skills every year through various term papers, especially those that relate to psychology. In my free time I enjoy watching movies, playing video games, and cooking. I look forward to working with students and helping them improve and gain confidence in their writing skills!"
-55612382,"CEE379 FELLOW 3",he/him,55612382,"Brooklyn, NY",2025,fall,1,Business,"Hello! My name is Jay Piazza and I’m a junior majoring in psychology. I’m originally from Sacramento county and was drawn to Chico State because of its beautiful campus and surrounding landscape. I enjoy writing and building on my skills every year through various term papers, especially those that relate to psychology. In my free time I enjoy watching movies, playing video games, and cooking. I look forward to working with students and helping them improve and gain confidence in their writing skills!"
-856318382,"CEE379 FELLOW 4",they/them,856318382,"Perkasie, PA",2023,spring,2,"Computer Science, Japanese","Hello! My name is Jay Piazza and I’m a junior majoring in psychology. I’m originally from Sacramento county and was drawn to Chico State because of its beautiful campus and surrounding landscape. I enjoy writing and building on my skills every year through various term papers, especially those that relate to psychology. In my free time I enjoy watching movies, playing video games, and cooking. I look forward to working with students and helping them improve and gain confidence in their writing skills!"
-856318382,"CEE379 FELLOW 5",they/them,856318382,"Perkasie, PA",2023,spring,2,"Computer Science, Japanese","Hello! My name is Jay Piazza and I’m a junior majoring in psychology. I’m originally from Sacramento county and was drawn to Chico State because of its beautiful campus and surrounding landscape. I enjoy writing and building on my skills every year through various term papers, especially those that relate to psychology. In my free time I enjoy watching movies, playing video games, and cooking. I look forward to working with students and helping them improve and gain confidence in their writing skills!"
-856318382,"CEE379 FELLOW 6",they/them,856318382,"Perkasie, PA",2023,spring,2,"Computer Science, Japanese","Hello! My name is Jay Piazza and I’m a junior majoring in psychology. I’m originally from Sacramento county and was drawn to Chico State because of its beautiful campus and surrounding landscape. I enjoy writing and building on my skills every year through various term papers, especially those that relate to psychology. In my free time I enjoy watching movies, playing video games, and cooking. I look forward to working with students and helping them improve and gain confidence in their writing skills!"`;
+export const CEE379 = `id,assignment,name,pronouns,hometown,year,majorMinor,info,email
+aaw323,"CEE/EES 379","Alex Winters ",he/him,"Allendale, NJ ",2023,"Biology ","My passion is medicine- I hope to be an orthopedic surgeon in the future. I'm a research member for the Babcock lab, a volunteer EMT, the vice president of LU AMSA, and a 'Big' for a Big Brothers Big Sisters program. TRAC has been an integral part of my time of Lehigh, and I'm grateful for having been part of it. It's exposed me to many forms of writing and has enhanced my communication skills greatly!",aaw323@lehigh.edu
+hideMe,"CEE/EES 379","",‎,"",‎,"","",mwd223@lehigh.edu
+hideMe,"CEE/EES 379","",‎,"",‎,"","",mwd223@lehigh.edu`;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

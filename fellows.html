@@ -178,7 +178,7 @@
           console.log("CEE379 clicked!!");
           //activeCSV = "ENGR5";
           //title.innerHTML = "ENGR 005 Fellows";
-          localStorage.setItem("tabToDisplay", "CEE/EES 379 Fellows");
+          localStorage.setItem("tabToDisplay", "CEE/EES 379 Fellow");
 
           location.reload();
 
@@ -230,7 +230,7 @@
         const makeBUS3Gray = document.getElementById('BUS3-tab');
         makeBUS3Gray.style.backgroundColor = "#ccc";
         fellowCSV = BUS3;
-        console.log("in herree beyonce fellowCSV");
+        //console.log("in herree beyonce fellowCSV");
       } else if (localStorage.getItem("tabToDisplay")  === "ENGR 005 Fellows") {
         const makeENGR5Gray = document.getElementById('ENGR5-tab');
         makeENGR5Gray.style.backgroundColor = "#ccc";
@@ -268,7 +268,7 @@
         makeSOC313Gray.style.backgroundColor = "#ccc";
 
         fellowCSV = SOC313;
-      } else if (localStorage.getItem("tabToDisplay")  === "CEE/EES 379 Fellows") {
+      } else if (localStorage.getItem("tabToDisplay")  === "CEE/EES 379 Fellow") {
         const makeCEE379Gray = document.getElementById('CEE379-tab');
         makeCEE379Gray.style.backgroundColor = "#ccc";
         fellowCSV = CEE379;
@@ -279,9 +279,9 @@
         fellowCSV = Niche;
       } 
       
-      console.log("What is this?");
-      console.log(localStorage.getItem("tabToDisplay"));
-      console.log(fellowCSV);
+      //console.log("What is this?");
+      //console.log(localStorage.getItem("tabToDisplay"));
+      //console.log(fellowCSV);
       
 
      /** function handleTabClick('MLL90') {
@@ -290,13 +290,14 @@
       
       // let fellowCSV = active;
 
-      console.log(fellowCSV);
+      //console.log("BYONDCE")
+      //console.log(fellowCSV);
    
 
-      function diplayResults () {
+     /** function diplayResults () {
         console.log("called!!")
         alert("displayed");
-      }
+      } */
 
 
       var arrObj = [];
@@ -307,7 +308,7 @@
       {
         //var rowData = lines[i].split(',')
         var rowData = lines[i].match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g);
-        console.log("ROWDATA" + rowData);
+        // console.log("ROWDATA" + rowData);
 
         arrObj[i] = {};
         for(var j = 0; j < rowData.length; j++)
@@ -320,11 +321,12 @@
 
 
       for(let i = 1; i < arrObj.length; i++){
-        console.log("hello " + i);
+        // console.log("hello " + i);
         //console.log(arrObj[i]);
         var div = document.createElement('div');
         div.className = 'fellow-profile';
         div.className = 'col';
+        div.classList.add(arrObj[i].id);
 
         //var h1 = document.createElement('h1');
         //h1.innerText = "My title";
@@ -336,7 +338,6 @@
 
 
 
-        //console.log(arrObj[1].name);
 
 
 
@@ -361,15 +362,29 @@
 
         // Name & Pronouns
         var namePronouns = document.createElement("h1");
-        namePronouns.innerHTML = arrObj[i].name.replaceAll('"', '');;
+        namePronouns.innerHTML = arrObj[i].name.replaceAll('"', '');
         div.appendChild(namePronouns);
 
         // Picture
         var newImg = document.createElement("div");
-        newImg.innerHTML = '<img src=\'images/' + arrObj[1].picture + '.jpg \'  width="200">';
+        newImg.innerHTML = '<img src=\'images/profile-pics/' + arrObj[i].id + '.jpg \'  width="200px">';
         div.appendChild(newImg);
+        
         //document.getElementById("myText").innerHTML = number;
 
+
+        if (localStorage.getItem("tabToDisplay") === "Niche Fellows"){
+          // Niche Role 
+          var pronounHeader = document.createElement("h2");
+          pronounHeader.innerHTML = "Niche Focus: ";
+          pronounHeader.style.fontWeight = 'bold';
+          div.appendChild(pronounHeader);
+
+          var focus = document.createElement("span");
+          focus.innerHTML = arrObj[i].focus.replaceAll('"', '');;
+          focus.style.fontWeight = 'normal';
+          pronounHeader.appendChild(focus);
+        }
         
         // Pronouns header bold
         var pronounHeader = document.createElement("h2");
@@ -435,6 +450,16 @@
 
         $('.container').append(div);
       }
+
+      console.log("HIDE THE BLANK ONES")
+      //const collection = document.getElementsByClassName("hideMe");
+      // document.getElementsByClassName("hideMe").style.backgroundColor = "red";
+
+      const boxesToHide = document.querySelectorAll('.hideMe');
+
+      boxesToHide.forEach(box => {
+        box.style.visibility = 'hidden';
+      });
 
      /** document.getElementById('lin').innerHTML = arrObj[1].lin;
       document.getElementById('name').innerHTML = arrObj[1].name;
