@@ -181,7 +181,7 @@ body{
     text-align: center;
     color: white;
     margin-top: 3vh;
-    position: relative;
+    position: absolute;
     bottom: 0;
 }
 
