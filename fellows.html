@@ -38,47 +38,51 @@
 </head>
 <body>
     <div class="header-container">           
-        <header>
-            <nav>
+      <header>
+          <nav>
+              <div class="mybutton">
+                <img src="images/navyLogo.JPG" id="logo" alt="TRAC Logo" align="left">
+              </div>
+              <span id="links">
                 <div class="mybutton">
-                  <img src="images/navyLogo.JPG" id="logo" alt="TRAC Logo" align="left">
+                  <a href="index.html">Home</a>
                 </div>
-                <span id="links">
-                  <div class="mybutton">
-                    <a href="index.html">Home</a>
-                  </div>
-                  <div class="mybutton">
-                    <a href="about.html">About Us</a>
-                  </div>
-                  <div class="mybutton">
-                    <a href="fellows.html">Meet the Fellows</a>
-                  </div>
-                  <div class="mybutton">
-                    <a href="classes.html">Classes We TRAC</a>
-                  </div>
-                  <div class="mybutton">
-                    <a href="faculty.html">Faculty Support</a>
-                  </div>
-                  <div class="mybutton">
-                    <a href="sitemap.html">Site Map</a>
-                  </div>
-                </span>
-                
-            </nav>
-        </header>
+                <div class="mybutton">
+                  <a href="about.html">About Us</a>
+                </div>
+                <div class="mybutton">
+                  <a href="fellows.html">Meet the Fellows</a>
+                </div>
+                <div class="mybutton">
+                  <a href="classes.html">Classes We TRAC</a>
+                </div>
+                <!-- <div class="mybutton">
+                  <a href="faculty.html">Faculty Support</a>
+                </div> -->
+                <div class="mybutton">
+                  <a href="sitemap.html">Site Map</a>
+                </div>
+              </span>
+          </nav>
+      </header>
     </div>
 
     <div class="tab">
       <button class="tablinks" id="lt-tab" onclick="handleTabClick('LT')">LT</button>
       <button class="tablinks" id="BUS3-tab" onclick="handleTabClick('BUS3')">BUS 003</button>
-      <button class="tablinks" id="ENGR5-tab" onclick="handleTabClick('ENGR5')">ENGR 005</button>
-      <button class="tablinks" id="ANTH320-tab" onclick="handleTabClick('ANTH320')">ANTH 320</button>
-      <button class="tablinks" id="ENGL1-tab" onclick="handleTabClick('ENGL1')">ENGL 001</button>
-      <button class="tablinks" id="MLL90-tab" onclick="handleTabClick('MLL90')">MLL 090</button>
-      <button class="tablinks" id="REL90-tab" onclick="handleTabClick('REL90')">REL 090</button>
-      <button class="tablinks" id="PSYCH203-tab" onclick="handleTabClick('PSYCH203')">PSYCH 203</button>
+      <button class="tablinks" id="ANTH317-tab" onclick="handleTabClick('ANTH317')">ANTH 317</button>
+
+      <!-- <button class="tablinks" id="ENGR5-tab" onclick="handleTabClick('ENGR5')">ENGR 005</button>
+      <button class="tablinks" id="ANTH317-tab" onclick="handleTabClick('ANTH317')">ANTH 317</button>
+      <button class="tablinks" id="ENGL1-tab" onclick="handleTabClick('ENGL1')">ANTH 317</button>
+      <button class="tablinks" id="MLL90-tab" onclick="handleTabClick('MLL90')">CSE 252</button>
+      <button class="tablinks" id="REL90-tab" onclick="handleTabClick('REL90')">EES 200</button>
+      <button class="tablinks" id="PSYCH203-tab" onclick="handleTabClick('PSYCH203')">HIST 001</button>
       <button class="tablinks" id="SOC313-tab" onclick="handleTabClick('SOC313')">SOC 313</button>
-      <button class="tablinks" id="CEE379-tab" onclick="handleTabClick('CEE379')">CEE/EES 379</button>
+      <button class="tablinks" id="CEE379-tab" onclick="handleTabClick('CEE379')">MLL 090</button>
+      <button class="tablinks" id="Niche-tab" onclick="handleTabClick('Niche')">Pre-Professional</button> 
+      <button class="tablinks" id="Niche-tab" onclick="handleTabClick('Niche')">REL 161</button>
+      <button class="tablinks" id="Niche-tab" onclick="handleTabClick('Niche')">SOC 197</button>   -->
       <button class="tablinks" id="Niche-tab" onclick="handleTabClick('Niche')">Niche</button> 
     </div>
     
@@ -126,11 +130,11 @@
 
           location.reload();
 
-        } else if (selectedTab === 'ANTH320'){
-          console.log("ANTH320 clicked!!");
+        } else if (selectedTab === 'ANTH317'){
+          console.log("ANTH317 clicked!!");
           //activeCSV = "ENGR5";
           //title.innerHTML = "ENGR 005 Fellows";
-          localStorage.setItem("tabToDisplay", "ANTH 320 Fellows");
+          localStorage.setItem("tabToDisplay", "ANTH 317 Fellows");
 
           location.reload();
 
@@ -206,7 +210,7 @@
       import {BUS3} from './fellowData/BUS3.js'
       import {ENGR5} from './fellowData/ENGR5.js'
 
-      import {ANTH320} from './fellowData/ANTH320.js'
+      import {ANTH317} from './fellowData/ANTH317.js'
       import {ENGL1} from './fellowData/ENGL1.js'
       import {MLL90} from './fellowData/MLL90.js'
       import {REL90} from './fellowData/REL90.js'
@@ -240,10 +244,10 @@
         makeLTGray.style.backgroundColor = "#ccc";
 
         fellowCSV = LT;
-      } else if (localStorage.getItem("tabToDisplay")  === "ANTH 320 Fellows") {
-        const makeANTH320Gray = document.getElementById('ANTH320-tab');
-        makeANTH320Gray.style.backgroundColor = "#ccc";
-        fellowCSV = ANTH320;
+      } else if (localStorage.getItem("tabToDisplay")  === "ANTH 317 Fellows") {
+        const makeANTH317Gray = document.getElementById('ANTH317-tab');
+        makeANTH317Gray.style.backgroundColor = "#ccc";
+        fellowCSV = ANTH317;
       }else if (localStorage.getItem("tabToDisplay") === "ENGL 001 Fellows"){
         const makeENGL1Gray = document.getElementById('ENGL1-tab');
         makeENGL1Gray.style.backgroundColor = "#ccc";
