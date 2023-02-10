@@ -35,6 +35,8 @@
     <link rel="stylesheet" href="aboutStyle.css">
     <link rel="stylesheet" href="fellowsStyle.css">
     <title>TRAC</title>
+    <link rel="icon" type="image/png" href="images/logo/pen-favicon-nobg.png">
+
 </head>
 <body>
     <div class="header-container">           
@@ -73,7 +75,12 @@
       <button class="tablinks" id="BIOS41-tab" onclick="handleTabClick('BIOS41')">BIOS 041</button>
       <button class="tablinks" id="BIOS42-tab" onclick="handleTabClick('BIOS42')">BIOS 042</button>
       <button class="tablinks" id="BUS3-tab" onclick="handleTabClick('BUS3')">BUS 003</button>
+      <button class="tablinks" id="CSE252-tab" onclick="handleTabClick('CSE252')">CSE 252</button>
+      <button class="tablinks" id="EES200-tab" onclick="handleTabClick('EES200')">EES 200</button>
+      <button class="tablinks" id="HIST1-tab" onclick="handleTabClick('HIST1')">HIST 001</button>
+      <button class="tablinks" id="MLL90-tab" onclick="handleTabClick('MLL90')">MLL 090</button>
 
+      
       <!-- <button class="tablinks" id="ENGR5-tab" onclick="handleTabClick('ENGR5')">ENGR 005</button>
       <button class="tablinks" id="ANTH317-tab" onclick="handleTabClick('ANTH317')">ANTH 317</button>
       <button class="tablinks" id="ENGL1-tab" onclick="handleTabClick('ENGL1')">ANTH 317</button>
@@ -156,27 +163,35 @@
 
           location.reload();
 
-        } else if (selectedTab === 'REL90'){
-          console.log("REL90 clicked!!");
+        } else if (selectedTab === 'MLL90'){
+          console.log("MLL90 clicked!!");
           //activeCSV = "ENGR5";
           //title.innerHTML = "ENGR 005 Fellows";
-          localStorage.setItem("tabToDisplay", "REL 090 Fellows");
+          localStorage.setItem("tabToDisplay", "MLL 090 Fellows");
 
           location.reload();
 
-        } else if (selectedTab === 'PSYCH203'){
-          console.log("PSYCH203 clicked!!");
+        } else if (selectedTab === 'CSE252'){
+          console.log("CSE252 clicked!!");
           //activeCSV = "ENGR5";
           //title.innerHTML = "ENGR 005 Fellows";
-          localStorage.setItem("tabToDisplay", "PSYCH 203 Fellows");
+          localStorage.setItem("tabToDisplay", "CSE 252 Fellows");
 
           location.reload();
 
-        } else if (selectedTab === 'SOC313'){
-          console.log("SOC313 clicked!!");
+        } else if (selectedTab === 'EES200'){
+          console.log("EES200 clicked!!");
           //activeCSV = "ENGR5";
           //title.innerHTML = "ENGR 005 Fellows";
-          localStorage.setItem("tabToDisplay", "SOC 313 Fellows");
+          localStorage.setItem("tabToDisplay", "EES 200 Fellows");
+
+          location.reload();
+
+        } else if (selectedTab === 'HIST1'){
+          console.log("HIST1 clicked!!");
+          //activeCSV = "ENGR5";
+          //title.innerHTML = "ENGR 005 Fellows";
+          localStorage.setItem("tabToDisplay", "HIST 001 Fellows");
 
           location.reload();
 
@@ -215,9 +230,10 @@
       import {ANTH317} from './fellowData/ANTH317.js'
       import {BIOS41} from './fellowData/BIOS41.js'
       import {BIOS42} from './fellowData/BIOS42.js'
-      import {REL90} from './fellowData/REL90.js'
-      import {PSYCH203} from './fellowData/PSYCH203.js'
-      import {SOC313} from './fellowData/SOC313.js'
+      import {MLL90} from './fellowData/MLL90.js'
+      import {CSE252} from './fellowData/CSE252.js'
+      import {EES200} from './fellowData/EES200.js'
+      import {HIST1} from './fellowData/HIST1.js'
       import {CEE379} from './fellowData/CEE379.js'
       import {Niche} from './fellowData/Niche.js'
 
@@ -259,21 +275,27 @@
         const makeBIOS42Gray = document.getElementById('BIOS42-tab');
         makeBIOS42Gray.style.backgroundColor = "#ccc";
         fellowCSV = BIOS42;
-      }else if (localStorage.getItem("tabToDisplay") === "REL 090 Fellows"){
-        const makeREL90Gray = document.getElementById('REL90-tab');
-        makeREL90Gray.style.backgroundColor = "#ccc";
+      }else if (localStorage.getItem("tabToDisplay") === "MLL 090 Fellows"){
+        const makeMLL90Gray = document.getElementById('MLL90-tab');
+        makeMLL90Gray.style.backgroundColor = "#ccc";
 
-        fellowCSV = REL90;
-      } else if (localStorage.getItem("tabToDisplay")  === "PSYCH 203 Fellows") {
-        const makePSYCH203Gray = document.getElementById('PSYCH203-tab');
-        makePSYCH203Gray.style.backgroundColor = "#ccc";
-        fellowCSV = PSYCH203;
-      }else if (localStorage.getItem("tabToDisplay") === "SOC 313 Fellows"){
+        fellowCSV = MLL90;
+      } else if (localStorage.getItem("tabToDisplay")  === "CSE 252 Fellows") {
+        const makeCSE252Gray = document.getElementById('CSE252-tab');
+        makeCSE252Gray.style.backgroundColor = "#ccc";
+        fellowCSV = CSE252;
+      }else if (localStorage.getItem("tabToDisplay") === "EES 200 Fellows"){
         // default LT
-        const makeSOC313Gray = document.getElementById('SOC313-tab');
-        makeSOC313Gray.style.backgroundColor = "#ccc";
+        const makeEES200Gray = document.getElementById('EES200-tab');
+        makeEES200Gray.style.backgroundColor = "#ccc";
 
-        fellowCSV = SOC313;
+        fellowCSV = EES200;
+      } else if (localStorage.getItem("tabToDisplay") === "HIST 001 Fellows"){
+        // default LT
+        const makeHIST1Gray = document.getElementById('HIST1-tab');
+        makeHIST1Gray.style.backgroundColor = "#ccc";
+
+        fellowCSV = HIST1;
       } else if (localStorage.getItem("tabToDisplay")  === "CEE/EES 379 Fellow") {
         const makeCEE379Gray = document.getElementById('CEE379-tab');
         makeCEE379Gray.style.backgroundColor = "#ccc";
