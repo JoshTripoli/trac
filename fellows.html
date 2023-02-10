@@ -69,8 +69,9 @@
 
     <div class="tab">
       <button class="tablinks" id="lt-tab" onclick="handleTabClick('LT')">LT</button>
-      <button class="tablinks" id="BUS3-tab" onclick="handleTabClick('BUS3')">BUS 003</button>
       <button class="tablinks" id="ANTH317-tab" onclick="handleTabClick('ANTH317')">ANTH 317</button>
+      <button class="tablinks" id="BIOS41-tab" onclick="handleTabClick('BIOS41')">BIOS 041</button>
+      <button class="tablinks" id="BUS3-tab" onclick="handleTabClick('BUS3')">BUS 003</button>
 
       <!-- <button class="tablinks" id="ENGR5-tab" onclick="handleTabClick('ENGR5')">ENGR 005</button>
       <button class="tablinks" id="ANTH317-tab" onclick="handleTabClick('ANTH317')">ANTH 317</button>
@@ -138,11 +139,11 @@
 
           location.reload();
 
-        } else if (selectedTab === 'ENGL1'){
-          console.log("ENGL1 clicked!!");
+        } else if (selectedTab === 'BIOS41'){
+          console.log("BIOS41 clicked!!");
           //activeCSV = "ENGR5";
           //title.innerHTML = "ENGR 005 Fellows";
-          localStorage.setItem("tabToDisplay", "ENGL 001 Fellows");
+          localStorage.setItem("tabToDisplay", "BIOS 041 Fellows");
 
           location.reload();
 
@@ -211,7 +212,7 @@
       import {ENGR5} from './fellowData/ENGR5.js'
 
       import {ANTH317} from './fellowData/ANTH317.js'
-      import {ENGL1} from './fellowData/ENGL1.js'
+      import {BIOS41} from './fellowData/BIOS41.js'
       import {MLL90} from './fellowData/MLL90.js'
       import {REL90} from './fellowData/REL90.js'
       import {PSYCH203} from './fellowData/PSYCH203.js'
@@ -248,11 +249,11 @@
         const makeANTH317Gray = document.getElementById('ANTH317-tab');
         makeANTH317Gray.style.backgroundColor = "#ccc";
         fellowCSV = ANTH317;
-      }else if (localStorage.getItem("tabToDisplay") === "ENGL 001 Fellows"){
-        const makeENGL1Gray = document.getElementById('ENGL1-tab');
-        makeENGL1Gray.style.backgroundColor = "#ccc";
+      }else if (localStorage.getItem("tabToDisplay") === "BIOS 041 Fellows"){
+        const makeBIOS41Gray = document.getElementById('BIOS41-tab');
+        makeBIOS41Gray.style.backgroundColor = "#ccc";
 
-        fellowCSV = ENGL1;
+        fellowCSV = BIOS41;
       } else if (localStorage.getItem("tabToDisplay")  === "MLL 090 Fellows") {
         const makeMLL90Gray = document.getElementById('MLL90-tab');
         makeMLL90Gray.style.backgroundColor = "#ccc";
