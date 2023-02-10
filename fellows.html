@@ -118,99 +118,54 @@
         const title = document.getElementById('classTitle');
 
         if(selectedTab === 'LT'){
-          //console.log("LT clicked!!");
-          //title.innerHTML = "Leadership Team";
-          //activeCSV = "LT";
           localStorage.setItem("tabToDisplay", "Leadership Team");
-         
           location.reload();
         } else if (selectedTab === 'BUS3') {
-          console.log("BUS3 clicked!!");
+        //  console.log("BUS3 clicked!!");
           activeCSV = "BUS3";
-         // title.innerHTML = "BUS 003 Fellows";
           localStorage.setItem("tabToDisplay", "BUS 003 Fellows");
-
           location.reload();
         } else if (selectedTab === 'ENGR5'){
-          console.log("ENGR5 clicked!!");
-          //activeCSV = "ENGR5";
-          //title.innerHTML = "ENGR 005 Fellows";
+        // console.log("ENGR5 clicked!!");
           localStorage.setItem("tabToDisplay", "ENGR 005 Fellows");
-
           location.reload();
-
         } else if (selectedTab === 'ANTH317'){
-          console.log("ANTH317 clicked!!");
-          //activeCSV = "ENGR5";
-          //title.innerHTML = "ENGR 005 Fellows";
+        //  console.log("ANTH317 clicked!!");
           localStorage.setItem("tabToDisplay", "ANTH 317 Fellows");
-
           location.reload();
 
         } else if (selectedTab === 'BIOS41'){
-          console.log("BIOS41 clicked!!");
-          //activeCSV = "ENGR5";
-          //title.innerHTML = "ENGR 005 Fellows";
+        //  console.log("BIOS41 clicked!!");
           localStorage.setItem("tabToDisplay", "BIOS 041 Fellows");
-
           location.reload();
-
         } else if (selectedTab === 'BIOS42'){
-          console.log("BIOS42 clicked!!");
-          //activeCSV = "ENGR5";
-          //title.innerHTML = "ENGR 005 Fellows";
+        //  console.log("BIOS42 clicked!!");
           localStorage.setItem("tabToDisplay", "BIOS 042 Fellows");
-
           location.reload();
-
         } else if (selectedTab === 'MLL90'){
-          console.log("MLL90 clicked!!");
-          //activeCSV = "ENGR5";
-          //title.innerHTML = "ENGR 005 Fellows";
+        //  console.log("MLL90 clicked!!");
           localStorage.setItem("tabToDisplay", "MLL 090 Fellows");
-
           location.reload();
-
         } else if (selectedTab === 'CSE252'){
-          console.log("CSE252 clicked!!");
-          //activeCSV = "ENGR5";
-          //title.innerHTML = "ENGR 005 Fellows";
+        //  console.log("CSE252 clicked!!");
           localStorage.setItem("tabToDisplay", "CSE 252 Fellows");
-
           location.reload();
-
         } else if (selectedTab === 'EES200'){
-          console.log("EES200 clicked!!");
-          //activeCSV = "ENGR5";
-          //title.innerHTML = "ENGR 005 Fellows";
+        //  console.log("EES200 clicked!!");
           localStorage.setItem("tabToDisplay", "EES 200 Fellows");
-
           location.reload();
-
         } else if (selectedTab === 'HIST1'){
           console.log("HIST1 clicked!!");
-          //activeCSV = "ENGR5";
-          //title.innerHTML = "ENGR 005 Fellows";
           localStorage.setItem("tabToDisplay", "HIST 001 Fellows");
-
           location.reload();
-
         } else if (selectedTab === 'CEE379'){
           console.log("CEE379 clicked!!");
-          //activeCSV = "ENGR5";
-          //title.innerHTML = "ENGR 005 Fellows";
           localStorage.setItem("tabToDisplay", "CEE/EES 379 Fellow");
-
           location.reload();
-
         } else if (selectedTab === 'Niche'){
           console.log("Niche clicked!!");
-          //activeCSV = "ENGR5";
-          //title.innerHTML = "ENGR 005 Fellows";
           localStorage.setItem("tabToDisplay", "Niche Fellows");
-
           location.reload();
-
         } else {
           // default to LT
           console.log("default!!");
@@ -307,25 +262,6 @@
         fellowCSV = Niche;
       } 
       
-      //console.log("What is this?");
-      //console.log(localStorage.getItem("tabToDisplay"));
-      //console.log(fellowCSV);
-      
-
-     /** function handleTabClick('MLL90') {
-        alert("hello");
-      }*/
-      
-      // let fellowCSV = active;
-
-      //console.log("BYONDCE")
-      //console.log(fellowCSV);
-   
-
-     /** function diplayResults () {
-        console.log("called!!")
-        alert("displayed");
-      } */
 
 
       var arrObj = [];
@@ -489,30 +425,6 @@
         box.style.visibility = 'hidden';
       });
 
-     /** document.getElementById('lin').innerHTML = arrObj[1].lin;
-      document.getElementById('name').innerHTML = arrObj[1].name;
-      document.getElementById('pronouns').innerHTML = arrObj[1].pronouns;
-      document.getElementById('imgDiv').innerHTML='<img src=\'images/' + arrObj[1].picture + '.jpg \'  width="200">'
-      //document.getElementById('picture').innerHTML = arrObj[1].picture;
-      document.getElementById('hometown').innerHTML = arrObj[1].hometown;
-      document.getElementById('year').innerHTML = arrObj[1].year;
-      document.getElementById('semester').innerHTML = arrObj[1].semester;
-      document.getElementById('year').innerHTML = arrObj[1].year;
-      document.getElementById('yearsIn').innerHTML = arrObj[1].yearsIn;
-      document.getElementById('majorMinor').innerHTML = arrObj[1].majorMinor;
-      document.getElementById('info').innerHTML = arrObj[1].info; */
-
-
-     
-      //var val = arrObj[1].picture,
-       //   src = 'images/' + val +'.jpg',
-         // img = document.createElement('img');
-
-         // console.log("my src:");
-          //console.log(src);
-
-      //img.src = src;
-      //document.body.appendChild(img);
 
 
 
@@ -538,61 +450,3 @@
 
 
 
-
-
-<!-- 
-
-
-<script type="text/javascript">
-</script> -->
-
-
-
-
-
-
-
-<!-- 
-
-<script type="text/javascript">
-  $(document).ready(function () {
-    $('#submit-file').on("click", function (e) {
-      e.preventDefault();
-      $('#files').parse({
-        config: {
-          delimiter: "auto",
-          complete: displayHTMLTable,
-        },
-        before: function (file, inputElem) {
-          //console.log("Parsing file...", file);
-        },
-        error: function (err, file) {
-          //console.log("ERROR:", err, file);
-        },
-        complete: function () {
-          //console.log("Done with all files");
-        }
-      });
-    });
-
-	function displayHTMLTable(results){
-		var table = "<table class='table'>";
-		var data = results.data;
-		 
-		for(i=0;i<data.length;i++){
-			table+= "<tr>";
-			var row = data[i];
-			var cells = row.join(",").split(",");
-			 
-			for(j=0;j<cells.length;j++){
-				table+= "<td>";
-				table+= cells[j];
-				table+= "</th>";
-			}
-			table+= "</tr>";
-		}
-		table+= "</table>";
-		$("#parsed_csv_list").html(table);
-	}
-  });
-</script> -->
