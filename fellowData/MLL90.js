@@ -1,4 +1,0 @@
-export const MLL90 = `id,assignment,name,pronouns,hometown,year,majorMinor,info,email
-hul323,"MLL 090","Huachen Liang",she/her,"Beijing, China",2023,"Acct","I enjoy kayaking and hiking. Lake Nockamixon and High Point NJ are my to go places. I’m also passionate about Asian Studies and Anthropology. I worked at the Yangguanzhai archaeological site. It was an unforgettable experience excavating potteries and, of course, skeletal remains. ",hul323@lehigh.edu
-lrw324,"MLL 090","Lexa Winigrad",she/her,"Fanwood, NJ",2024,"Finance","I TRAC because I see how impactful this program can be for students. I find it incredibly rewarding watching my peers grow as writers over the course of a semester. I've previously TRAC'ed BUS 003 and I'm so excited to be TRACing MLL 090 this semester!",lrw324@lehigh.edu
-hideMe,"MLL 090","",‎,"",‎,"","",mwd223@lehigh.edu`;
