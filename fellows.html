@@ -79,19 +79,9 @@
       <button class="tablinks" id="EES200-tab" onclick="handleTabClick('EES200')">EES 200</button>
       <button class="tablinks" id="HIST1-tab" onclick="handleTabClick('HIST1')">HIST 001</button>
       <button class="tablinks" id="MLL90-tab" onclick="handleTabClick('MLL90')">MLL 090</button>
-
-      
-      <!-- <button class="tablinks" id="ENGR5-tab" onclick="handleTabClick('ENGR5')">ENGR 005</button>
-      <button class="tablinks" id="ANTH317-tab" onclick="handleTabClick('ANTH317')">ANTH 317</button>
-      <button class="tablinks" id="ENGL1-tab" onclick="handleTabClick('ENGL1')">ANTH 317</button>
-      <button class="tablinks" id="MLL90-tab" onclick="handleTabClick('MLL90')">CSE 252</button>
-      <button class="tablinks" id="REL90-tab" onclick="handleTabClick('REL90')">EES 200</button>
-      <button class="tablinks" id="PSYCH203-tab" onclick="handleTabClick('PSYCH203')">HIST 001</button>
-      <button class="tablinks" id="SOC313-tab" onclick="handleTabClick('SOC313')">SOC 313</button>
-      <button class="tablinks" id="CEE379-tab" onclick="handleTabClick('CEE379')">MLL 090</button>
-      <button class="tablinks" id="Niche-tab" onclick="handleTabClick('Niche')">Pre-Professional</button> 
-      <button class="tablinks" id="Niche-tab" onclick="handleTabClick('Niche')">REL 161</button>
-      <button class="tablinks" id="Niche-tab" onclick="handleTabClick('Niche')">SOC 197</button>   -->
+      <button class="tablinks" id="PREPROF-tab" onclick="handleTabClick('PREPROF')">Pre-Prof</button>
+      <button class="tablinks" id="REL161-tab" onclick="handleTabClick('REL161')">REL 161</button>
+      <button class="tablinks" id="SOC197-tab" onclick="handleTabClick('SOC197')">SOC 197</button>
       <button class="tablinks" id="Niche-tab" onclick="handleTabClick('Niche')">Niche</button> 
     </div>
     
@@ -158,9 +148,17 @@
           console.log("HIST1 clicked!!");
           localStorage.setItem("tabToDisplay", "HIST 001 Fellows");
           location.reload();
-        } else if (selectedTab === 'CEE379'){
-          console.log("CEE379 clicked!!");
-          localStorage.setItem("tabToDisplay", "CEE/EES 379 Fellow");
+        } else if (selectedTab === 'PREPROF'){
+          //  console.log("MLL90 clicked!!");
+            localStorage.setItem("tabToDisplay", "Pre-Professional Fellows");
+            location.reload();
+        } else if (selectedTab === 'REL161'){
+          //  console.log("MLL90 clicked!!");
+            localStorage.setItem("tabToDisplay", "REL 161 Fellows");
+            location.reload();
+        } else if (selectedTab === 'SOC197'){
+          console.log("SOC197 clicked!!");
+          localStorage.setItem("tabToDisplay", "SOC 197 Fellow");
           location.reload();
         } else if (selectedTab === 'Niche'){
           console.log("Niche clicked!!");
@@ -189,7 +187,9 @@
       import {CSE252} from './fellowData/CSE252.js'
       import {EES200} from './fellowData/EES200.js'
       import {HIST1} from './fellowData/HIST1.js'
-      import {CEE379} from './fellowData/CEE379.js'
+      import {PREPROF} from './fellowData/PREPROF.js'
+      import {REL161} from './fellowData/REL161.js'
+      import {SOC197} from './fellowData/SOC197.js'
       import {Niche} from './fellowData/Niche.js'
 
 
@@ -251,11 +251,21 @@
         makeHIST1Gray.style.backgroundColor = "#ccc";
 
         fellowCSV = HIST1;
-      } else if (localStorage.getItem("tabToDisplay")  === "CEE/EES 379 Fellow") {
-        const makeCEE379Gray = document.getElementById('CEE379-tab');
-        makeCEE379Gray.style.backgroundColor = "#ccc";
-        fellowCSV = CEE379;
-      }else if (localStorage.getItem("tabToDisplay") === "Niche Fellows"){
+      } else if (localStorage.getItem("tabToDisplay")  === "SOC 197 Fellow") {
+        const makeSOC197Gray = document.getElementById('SOC197-tab');
+        makeSOC197Gray.style.backgroundColor = "#ccc";
+        fellowCSV = SOC197;
+      } else if (localStorage.getItem("tabToDisplay") === "Pre-Professional Fellows"){
+        const makePREPROFGray = document.getElementById('PREPROF-tab');
+        makePREPROFGray.style.backgroundColor = "#ccc";
+
+        fellowCSV = PREPROF;
+      }  else if (localStorage.getItem("tabToDisplay") === "REL 161 Fellows"){
+        const makeREL161Gray = document.getElementById('REL161-tab');
+        makeREL161Gray.style.backgroundColor = "#ccc";
+
+        fellowCSV = REL161;
+      } else if (localStorage.getItem("tabToDisplay") === "Niche Fellows"){
         const makeNicheGray = document.getElementById('Niche-tab');
         makeNicheGray.style.backgroundColor = "#ccc";
 
