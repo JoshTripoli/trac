@@ -17,6 +17,11 @@ html, body{
   /* background-color: red !important; */
 }
 
+.hide-normal {
+  display: none !important;
+}
+
+/* contains the mission statement info to the left and the gallery to the right on screen sizes above 1300px width. otherwise gallery put above */
 #home-container {
   display: flex;
   max-width: 1600px;
@@ -293,16 +298,73 @@ footer {
 
 /*Small desktop no social media  View*/
 @media (max-width: 1300px){
+  body {
+    /* background-color: red !important; */
+  }
 
+  #home-container {
+    display: block;
+    /* background-color: aquamarine !important; */
+    justify-content: center;
+  }
+
+  #home-info {
+    margin-top: 2vh;
+    /* background-color: rebeccapurple; */
+    width: 100%;
+  }
+
+  #galleryContainer {
+    margin: 0 auto;
+    justify-content: center;
+    /* background-color: orange !important; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+  }
+
+  #imageGallery {
+    height: 50vh;
+    width: 100%;
+  }
+
+  /* Put the image gallery on top instead of to the right */
+  .outer {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .inner:nth-of-type(1) {
+    order: 2 !important;
+  }
+  .inner:nth-of-type(2) {
+    order: 1 !important;
+  }
+
+  #learnMoreContainer {
+    position: relative;
+    min-width: 30vw;
+    height: 3em;
+    left: 0;
+    margin: 0 auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
 }
 
 /*Tablet View*/
 @media (max-width: 768px){
-
+  body {
+    background-color: green !important;
+  }
 }
 
 /*Mobile View*/
 @media (max-width: 400px){
-
+  body {
+    background-color: pink !important;
+  }
 }
 
