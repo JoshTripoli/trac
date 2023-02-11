@@ -307,6 +307,7 @@ footer {
     /* background-color: aquamarine !important; */
     justify-content: center;
     background-color: blue !important;
+    padding-bottom: 10vh;
   }
 
   #home-info {
@@ -322,6 +323,8 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 10vh;
+
     /* width: 100%; */
     /* margin-top: 3vh; */
     /* margin-bottom: 5vh; */
@@ -330,7 +333,7 @@ footer {
   #imageGallery {
     margin: 0;
     padding: 0;
-    min-width: 800px;
+    min-width: 700px;
     /* height: 50vw !important;
     width: 100vw !important; */
     /* max-width: 3000px !important; */
@@ -506,7 +509,7 @@ footer {
     margin-top: 20vh;
     /* min-width: 800px !important; */
     /* background-color: red !important; */
-    margin-bottom: -7vh;
+    margin-bottom: 10vh;
     /* max-height: 300px; */
   }
   
