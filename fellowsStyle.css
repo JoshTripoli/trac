@@ -148,6 +148,7 @@
 .container img {
     width: 300px;
     height: 300px;
+    margin-top: 12px;
     /* margin: 10px; */
 }
 
@@ -155,7 +156,7 @@
 .col {
     /* background-color: aquamarine !important; */
     /* background: linear-gradient(to top, white 94.5%, #110F34 5.5%) !important; */
-    background: linear-gradient(to top, white calc(100% - 40px), #110F34 40px) !important;
+    background: linear-gradient(to top, white calc(100% - 45px), #110F34 45px) !important;
 
 }
 
