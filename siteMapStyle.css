@@ -3,8 +3,9 @@
     bottom: 0;
 }
 
-h1 {
+#map-header {
     text-align: center;
+    margin-bottom: 12px;
 }
   
 ul {
@@ -14,6 +15,13 @@ ul {
 a {
     text-decoration: none;
     color: #333333;
+}
+
+li {
+    padding-top: 20px;
+    text-align: left;
+    margin-left: 250px;
+    list-style-type: disc;
 }
   
 a:hover {

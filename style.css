@@ -420,6 +420,21 @@ footer {
   #learnMoreContainer {
     width: 300px !important;
   }
+/*   
+  .mob-wrapper {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    z-index: 9999999;
+
+  }
+
+  #logo {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    z-index: 9999999;
+  } */
 }
 
 /*Mobile View*/
