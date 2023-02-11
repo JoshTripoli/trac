@@ -19,6 +19,9 @@ pit223,"BUS 003","Pia Tiimob ",she/her,"Gaithersburg, Maryland",2023,"Philosophy
 rfd225,"BUS 003","Rylin Douthit",she/her,"Wilmette, IL",2025,"Major: Psychology and Health, Medicine, & Society Minor: Spanish ","Hi! I am super grateful to be a part of the TRAC program and it is something I look forward to each day. I am currently TRACing the ENGR 005 class and I've really enjoyed the opportunity to work with students in a major concentration that I've never been exposed to. Looking forward to being part of this program throughout my next semesters at Lehigh!",rfd225@lehigh.edu
 smt225,"BUS 003","Sonia Trinkle",she/her,"Westport, CT",2025,"Biomechanical Engineering","Hi! Some of my hobbies are running, yoga, and listening to music & podcasts. A fun fact about me is that I have dual citizenship in the U.S. and Ireland. My favorite part about the TRAC program is helping other students with their writing while also developing and transforming my own abilities as a scholar. ",smt225@lehigh.edu
 trg224,"BUS 003","Thiyara Girihagama",she/her,"Colombo, Sri Lanka",2024,"B.S Economics and Computer Science","I'm an international student from Sri Lanka. In my free time I enjoy playing tennis, hanging out with friends, reading, and playing piano. I also enjoy observational astronomy and astrophysics research. My other research entails projects in the field of financial engineering/quantitative finance. I love TRAC for the amazing people I've met and conversations I've had, as well as for how it helps me keep my goals and ideas grounded and in perspective. I have previously TRAC'ed ENGR005 and REL090. ",trg224@lehigh.edu
+missing,"Niche","Mack",‎,"",‎,"","",missing@lehigh.edu,"Alumni"
+missing,"Niche","Mucharemba",‎,"",‎,"","",missing@lehigh.edu,"Alumni"
+missing,"Niche","MacMahon",‎,"",‎,"","",missing@lehigh.edu,"Alumni"
 hideMe,"BUS 003","",‎,"",‎,"","",missing@lehigh.edu`;
 
 
