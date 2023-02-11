@@ -135,6 +135,8 @@ html, body{
   margin-top: 3vh;
   margin-right: 1.5vw;
   margin-left: 1vw;
+  padding: 0;
+  background-color: red !important;
 
 }
 
@@ -304,6 +306,7 @@ footer {
     display: block;
     /* background-color: aquamarine !important; */
     justify-content: center;
+    background-color: blue !important;
   }
 
   #home-info {
@@ -319,15 +322,36 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    margin-top: 3vh;
-    margin-bottom: 5vh;
+    /* width: 100%; */
+    /* margin-top: 3vh; */
+    /* margin-bottom: 5vh; */
   }
 
   #imageGallery {
-    height: 50vh;
-    width: 100%;
+    margin: 0;
+    padding: 0;
+    min-width: 800px;
+    /* height: 50vw !important;
+    width: 100vw !important; */
+    /* max-width: 3000px !important; */
   }
+
+  #galleryContainer {
+    padding-top: 5vh;
+    /* min-width: 800px !important; */
+    /* background-color: red !important; */
+    /* min-height: 600px; */
+    /* margin-left: 100px;
+    margin-right: 100px; */
+
+    /* padding-right: 20vw;
+    padding-left: 20vw; */
+
+    /* height: 20vh;
+    width: 20vw; */
+  }
+
+
 
   /* Put the image gallery on top instead of to the right */
   .outer {
@@ -441,6 +465,51 @@ footer {
     top: 0;
     z-index: 9999999;
   } */
+}
+
+
+/*Gallery break point*/
+@media (max-width: 800px){
+  body {
+    /* background-color: red !important; */
+  }
+  .d-block {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: auto; /* set the height to adjust automatically */
+    /* max-height: 300px; */
+    display: block; /* make the image a block element so you can center it */
+    margin: 0 auto; /* center the image horizontally */
+
+  }
+
+  #imageGallery {
+    margin: 0;
+    padding: 0;
+    /* height: 50vh;
+    width: 50vw; */
+    min-width: 0px;
+    height: 100vh;
+    width: 100vw;
+    margin-top: -20vh;
+    margin-bottom: -50vh;
+
+    /* height: 50vw !important;
+    width: 100vw !important; */
+    /* max-width: 3000px !important; */
+  }
+
+  #galleryContainer {
+    /* padding-top: 5vh; */
+
+    margin-top: 20vh;
+    /* min-width: 800px !important; */
+    /* background-color: red !important; */
+    margin-bottom: -7vh;
+    /* max-height: 300px; */
+  }
+  
 }
 
 /*Mobile View*/
