@@ -47,10 +47,9 @@
 
 
 .innerWhiteBox {
-    margin-bottom: -60px;
+    /* margin-bottom: -20vh !important; */
     background-color: #110F34;
     color: white;
-    
 }
 
 
@@ -83,18 +82,16 @@
 
 
 .container {
-    /* background-color: rgb(197, 184, 209); /*Gallery bg color */
+    /* background-color: rgb(197, 184, 209);  */
     min-height: 500px;
     max-width: 1224px;
     margin: 0 auto; /*top bottom   left right */
+    margin-top: -5vh;
     display: flex; /*get inline*/
     flex-wrap: wrap; /*wrap to next line if not enough space */
     justify-content: space-between;
-    padding-top: 90px; /*margin bottom + min height 50 + 40 */
+    /* padding-top: 90px; margin bottom + min height 50 + 40 */
     text-align: center;
-
-    /* background-color: rgb(255, 255, 255); */
-
     /* background-image: url(images/gallery.svg);
     background-color: #b000b9;
     background-repeat: no-repeat; */
