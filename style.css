@@ -296,6 +296,18 @@ footer {
   display: none; 
  }
 
+/* fix overlapping footer */
+@media (max-width: 1470px){
+  #home-info {
+    /* background-color: aqua; */
+    padding-bottom: 15vh;
+  }
+
+  #galleryContainer {
+    margin-top: 5vw;
+  }
+}
+
 /*Small desktop no social media  View*/
 @media (max-width: 1300px){
   body {
@@ -306,8 +318,7 @@ footer {
     display: block;
     /* background-color: aquamarine !important; */
     justify-content: center;
-    /* background-color: blue !important; */
-    padding-bottom: 10vh;
+    /* margin-bottom: 15vh; */
     width: 100%;
   }
 
