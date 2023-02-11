@@ -345,6 +345,8 @@ footer {
     margin: 0 auto;
     margin-top: 5vh;
     margin-bottom: 5vh;
+    margin-bottom: 150px !important;
+
   }
 }
 
