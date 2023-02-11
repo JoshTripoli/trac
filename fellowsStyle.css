@@ -181,29 +181,6 @@
 }
 
 
-
-/*Small desktop no social media  View*/
-@media (max-width: 1300px){
-    #mlogo {
-        /* display: none; */
-    }
-
-    #social-media {
-        left: 0; 
-        right: 0; 
-        top: 0;
-        margin-left: auto; 
-        margin-right: auto; 
-        width: 180px;
-    }
-
-    /* .col h1 {
-        width: 111%;
-        left: -1.5vw;
-
-    } */
-
-}
 /*Tablet View*/
 @media (max-width: 768px){
     .col {
@@ -219,66 +196,6 @@
         display: block;
         text-align: center;
     } */
-
-    nav {
-        display: none;
-    }
-
-   /* All below for resize nav into rows for avoiding burger menu */
-    nav a {
-        display: block;
-    } 
-
-    .logo {
-        padding: 40px 0;
-    }
-
-    .mybutton {
-        margin-left: 0;
-    }
-
-    .header-container{
-        position: relative;
-    }
-
-    .container {
-        padding-top: 40px; 
-    }  
-
-     .mob-wrapper {
-        display: block; 
-        padding-right: 30px;
-    } 
-
-    .mob-nav {
-        display: none; /*default on. turn on with javascript*/
-        position: absolute; /*only acknowledge parents*/
-        padding-top: 10px;
-    }
-
-    .navbutton {
-        display: block;
-        background-color: rgb(138, 5, 5);
-        padding: 15px 30px;
-        margin-left: -70px;
-        text-align: center;
-    }
-
-    #name-hide {
-        display: none;
-    }
-
-    #mlogo {
-        position: absolute;
-        
-        /* left: 0; 
-        right: 0; 
-        top: 0;
-        margin-left: auto; 
-        margin-right: auto; 
-        width: 180px;
-        height: 180px; */
-    }
 
     #social-media {
         margin: 0 auto;
