@@ -23,7 +23,21 @@ li {
     /* margin-left: 10vw; */
     /* list-style-type: disc; */
 }
-  
+
+.innerWhiteBox {
+    padding-bottom: 50px;
+}
 a:hover {
     text-decoration: underline;
+}
+
+
+/* Navbar Breakpoint - Switch to condensed navbar*/
+@media (max-width: 980px){
+    .innerWhiteBox {
+        /* width: 80%; */
+        min-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
 }
