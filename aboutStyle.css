@@ -1,3 +1,7 @@
 .pageContent {
     margin-bottom: 7vh;
 }
+
+#content-wrap {
+    padding-bottom: 4rem;    /* Footer height */
+}
