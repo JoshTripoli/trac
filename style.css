@@ -19,12 +19,15 @@ html, body{
 
 #home-container {
   display: flex;
+  max-width: 1600px;
+  margin: 0 auto;
+  /* background-color: rebeccapurple; */
 }
 
 #home-info {
   margin-top: 2vh;
   /* background-color: rebeccapurple; */
-  /* width: 50%; */
+  width: 50%;
 }
 
 #TRACheader{
@@ -133,6 +136,7 @@ html, body{
 #imageGallery {
   height: 50vh;
   width: 50vw;
+  max-width: 800px;
   /* margin-left: auto; 
   margin-right: 3vh;
   margin-top: 3vh;
