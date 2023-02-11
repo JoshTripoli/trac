@@ -52,11 +52,6 @@
     color: white;
 }
 
-
-
-
-
-
 .footer-container {
     position: relative;
     bottom: 0;
@@ -65,19 +60,10 @@
 #page-container {
     position: relative;
     height: 100vh;
-  }
+}
   
-  #content-wrap {
+#content-wrap {
     padding-bottom: 4rem;    /* Footer height */
-  }
-
-  
-.fellow-profile {
-    background-color: white;
-    margin: 20px;
-    /* vertical-align: middle;
-    display: flex;
-    align-items: center; */
 }
 
 
@@ -143,21 +129,19 @@
 
 .col h1 {
     position: relative;
+    text-align: center;
     font-weight: bold;
     font-size: 1.75em;
-    padding: .25em;
-    width: 109.75%;
-    left: -1.05vw;
+    padding-top: 1.1vh;    
+    padding-bottom: 1.1vh;
+
+    width: 100%;
     /* margin: 0; */
 }
 
-/* .upper-blue-half {
-    background-color: #110F34;
-    height: 20px;
-} */
 
 .col h1, img {
-    background-color: #110F34;
+    /* background-color: #110F34; */
     color: white;
 }
 
@@ -167,32 +151,14 @@
     /* margin: 10px; */
 }
 
+/* Create the blue top headers for each of the Fellows' names */
 .col {
     /* background-color: aquamarine !important; */
-    /* background: linear-gradient(to top, white 40%, #110F34 40%) !important; */
+    /* background: linear-gradient(to top, white 94.5%, #110F34 5.5%) !important; */
+    background: linear-gradient(to top, white calc(100% - 40px), #110F34 40px) !important;
 
 }
 
-/* .col img {
-    width: 100%;
-    height: auto;
-} */
-
-.col p::first-line {
-    font-weight: bold;
-}
-
-
-.col p {
-    /* color: white; */
-    font-size: 0.875rem;
-    padding: 20px 25px;
-    line-height: 0.825rem;
-}
-
-/* .col .whitebg {
-    background-color: white;
-} */
 
 .col img:hover {
     /* background-color: white; */
@@ -230,24 +196,17 @@
         width: 180px;
     }
 
-    .col h1 {
+    /* .col h1 {
         width: 111%;
         left: -1.5vw;
 
-    }
+    } */
 
 }
 /*Tablet View*/
 @media (max-width: 768px){
     .col {
-        width: 47% /*width that allows for 2 boxers in a row*/
-    }
-
-    
-    .col h1 {
-        width: 105.5%;
-        left: -2.2vw;
-
+        width: 47% /*width that allows for 2 boxes in a row*/
     }
 
     .hide-desktop-only {
@@ -333,13 +292,6 @@
     .col {
         width: 100%
     }
-
-    .col h1 {
-        width: 111%;
-        left: -4vw;
-
-    }
-
 
     .hide-mobile-only {
         display: none;
