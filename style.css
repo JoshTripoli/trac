@@ -28,7 +28,10 @@ html, body{
   color: white;
   width: 16vw;
   height: 3em;
-  left: 30.5vw;
+  left: 17%;
+  margin-top: 5vh;
+  /* margin: 0 auto; */
+  /* left: 30.5vw; */
   /* margin-top: -5vh; */
 /* top: 924px; */
   border-radius: 1em;
@@ -41,7 +44,29 @@ html, body{
   font-size: 1em;
   line-height: 2.9em;
   text-align: center;
-  text-decoration: underline;
+  /* text-decoration: underline; */
+}
+
+#more-button {
+  text-decoration: none;
+}
+
+#learnMoreContainer a {
+    text-decoration: none !important;
+}
+
+#learnMoreContainer {
+  transition: all 0.2s ease-in-out; /* Optional: Adds a smooth transition effect */
+}
+
+#learnMoreContainer:hover {
+  transform: scale(1.1); /* Increases the size of the button */
+  filter: brightness(105%); /* Darkens the color of the button */
+}
+
+#learnMoreContainer:active {
+  transform: scale(0.9); /* Decreases the size of the button */
+  filter: brightness(90%); /* Darkens the color of the button further */
 }
 
 #mission {
@@ -190,7 +215,6 @@ html, body{
 }
 
 footer {
-    /* background-color: blueviolet; */
     min-height: 60px;
     margin-left: auto; 
     margin-right: auto; 
