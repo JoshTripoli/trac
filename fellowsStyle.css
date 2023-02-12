@@ -13,6 +13,7 @@
     position: sticky;
     z-index: 999999;
     top: 0;
+    margin-top: -1px;
   }
   
   /* Style the buttons inside the tab */
