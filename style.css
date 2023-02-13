@@ -14,7 +14,7 @@ html, body{
   position: relative;
   /* height: 100vh; */
   min-height: 100%;
-  background-color: red !important;
+  /* background-color: red !important; */
 }
 
 .hide-normal {
