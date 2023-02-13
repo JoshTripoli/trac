@@ -27,10 +27,10 @@ li {
 .innerWhiteBox {
     padding-bottom: 50px;
 }
+
 a:hover {
     text-decoration: underline;
 }
-
 
 /* Navbar Breakpoint - Switch to condensed navbar*/
 @media (max-width: 980px){
