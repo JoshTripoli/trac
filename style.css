@@ -557,10 +557,27 @@ footer {
   
 }
 
-/*Mobile View*/
-@media (max-width: 400px){
-  body {
-    /* background-color: pink !important; */
-  }
+/*Mobile home page footer break point*/
+@media (max-width: 580px){
+    #page-container {
+      /* background-color: rgb(200, 187, 0) !important; */
+      padding-bottom: 50vw;
+    }
+
+    .footer-container {
+      position: absolute;
+      bottom: 0;
+    }
 }
 
+@media (max-width: 340px){
+  #page-container {
+    background-color: pink !important;
+    padding-bottom: 150vw;
+  }
+
+  .footer-container {
+    position: absolute;
+    bottom: 0;
+  }
+}
