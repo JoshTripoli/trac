@@ -38,6 +38,11 @@ function clickGotIt() {
         $('#clickNextWarning').show();
         $('.showPrepareButton').transition('bounce');
     } 
+    if ($('.prepareSteps').is(":hidden")) {
+        // User has not yet clicked next
+        $('#clickNextWarning').show();
+        $('.showPrepareSteps').transition('bounce');
+    } 
 };
 
 $(window).on("load", function() {
@@ -59,24 +64,6 @@ $(window).on("load", function() {
         }
     });
 
-    $('.showPrepareButton').on('click', function() {
-        if ($(".keyTermDefinition:hidden").length === 0) {
-            $('#clickLabelsWarning').hide();
-            // $('.ui.labeled.icon.button').addClass('green');
-            $('#clickNextWarning').hide();
-            $('.showPrepareButton').css('display', 'none');
-            $('.prepareSegment').show();
-            $('.prepareSegment').transition('jiggle');
-            if ($(".keyTermDefinition:hidden").length === 0) {
-                $('.ui.labeled.icon.button').addClass('green');
-            }
-        } else { // user needs to finish going through key ideas before moving on to preparing for conference section
-            $('#clickLabelsWarning').show();
-            animateUnclickedLabels();
-        }
-
-    });
-
     $('.keyTerm').on('click', function(event) {
         $(event.target).closest('.keyTerm').children('.keyTermDefinition').show();
         $(event.target).closest('.keyTerm').transition('tada');
@@ -85,6 +72,32 @@ $(window).on("load", function() {
         //     $('.ui.labeled.icon.button').addClass('green');
         // }
         const vocabTerm = $(event.target).closest('.keyTerm').children('.keyTermLabel').text();
+    });
+
+    $('.showPrepareButton').on('click', function() {
+        if ($(".keyTermDefinition:hidden").length === 0) {
+            $('#clickLabelsWarning').hide();
+            // $('.ui.labeled.icon.button').addClass('green');
+            $('#clickNextWarning').hide();
+            // $('.showPrepareButton').parent('.ui.segment').hide();
+            $('.showPrepareButton').css('display', 'none');
+            $('.prepareSegment').show();
+            $('.prepareSegment').transition('jiggle');
+            // if ($(".keyTermDefinition:hidden").length === 0) {
+            //     $('.ui.labeled.icon.button').addClass('green');
+            // }
+        } else { // user needs to finish going through key ideas before moving on to preparing for conference section
+            $('#clickLabelsWarning').show();
+            animateUnclickedLabels();
+        }
+    });
+
+    $('.showPrepareSteps').on('click', function() {
+        $('#clickNextWarning').hide();
+        $('.prepareSteps').css('display', 'block');
+        $('.prepareSteps .ui.header').transition('jiggle');
+        $('.stepsButton').css('display', 'none');
+        $('.ui.labeled.icon.button').addClass('green');
     });
 
 });
