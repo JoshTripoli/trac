@@ -42,7 +42,13 @@ function clickGotIt() {
         // User has not yet clicked next
         $('#clickNextWarning').show();
         $('.showPrepareSteps').transition('bounce');
-    } 
+    } else {
+        $('#completeContainer').css('display', 'block');
+    }
+
+    // if ($('.completeContainer').is(':hidden')) {
+    //     $('.completeContainer').css('display', 'block');
+    // }
 };
 
 $(window).on("load", function() {
