@@ -97,9 +97,9 @@
               <h3 class="ui header"><i class="video blue icon"></i>
                 <div class="content">What is TRAC?</div>
               </h3>
+              <hr>
               <iframe src="https://player.vimeo.com/video/71981834?h=c097c67954" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 <!-- <p><a href="https://vimeo.com/71981834">TRAC video (1280 x 720)</a> from <a href="https://vimeo.com/user3006697">LU College of Arts and Sciences</a> on <a href="https://vimeo.com">Vimeo</a>.</p> -->
-              <hr>
               <div class="ui basic segment removePadding">
                 <div class="ui mini green right labeled icon button showLearnSectionButton"><i
                     class="down arrow icon"></i> Next</div>
@@ -125,6 +125,10 @@
                   Next</div>
               </div>
             </div>
+
+    
+
+            
             <div class="ui segment keyIdeasSegment hidden">
               <h3 class="ui header"><i class="key blue icon"></i>
                 <div class="content">Key Ideas</div>
@@ -176,16 +180,54 @@
                         Everyone can benefit from the process of getting feedback and engaging in dialogue about their writing with smart and helpful readers.
                       </ul>
                     </span></div>
+
                 </div>
+              </div>  
+              <div class="ui mini green right labeled icon button showPrepareButton" ><i class="down arrow icon"></i>
+                Next</div>   
+            </div>
+            
+
+
+            <div class="ui raised segment prepareSegment hidden">
+              <h3 class="ui header"><i class="clipboard list blue icon"></i>
+                <div class="content">How to Prepare for a TRAC Conference?</div>
+              </h3>
+              <hr>
+              <div class="ui basic segment removePadding">
+                <div class="ui mini green right labeled icon button showLearnSectionButton"><i
+                    class="down arrow icon"></i> Next</div>
               </div>
+              <div class="ui basic segment learnSegment hidden">
+                <h5 class="ui header"><i class="arrow circle right blue icon"></i>
+                  
+                  <div class="content">
+                    Submit draft.
+                  </div>
+                </h5>
+                <h5 class="ui header"><i class="arrow circle right blue icon"></i>
+                  <div class="content">
+                    Read comments.
+                  </div>
+                </h5>
+                <h5 class="ui header"><i class="arrow circle right blue icon"></i>
+                  <div class="content">
+                    Show up. 
+                  </div>
+                </h5>
+              </div>
+            </div>
+
+
+
+            <div class="ui warning message" id="clickLabelsWarning">
+              <div class="header">Click on each label to proceed </div>
             </div>
             <div class="ui warning message" id="clickNextWarning">
               <div class="header">Click "Next"</div>
             </div>
-            <div class="ui warning message" id="clickLabelsWarning">
-              <div class="header">Click on each label to proceed </div>
-            </div><a href="javascript:void(0);" onclick="javascript:clickGotIt();">
-              <div class="ui labeled icon button"><i class="flag checkered icon"></i> Got it!</div>
+            <a href="javascript:void(0);" onclick="javascript:clickGotIt();">
+              <div class="ui labeled icon button"><i class="flag checkered icon"></i>Complete</div>
             </a>
           </div>
 
@@ -226,6 +268,7 @@
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.js"
       integrity="sha256-qs5p0BFSqSvrstBxPvex+zdyrzcyGdHNeNmAirO2zc0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/print-js/1.6.0/print.js"></script>
 
     <script src="scripts.js"></script>
     <script src="about/base_start.js"></script>
