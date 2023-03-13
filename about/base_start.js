@@ -69,13 +69,13 @@ function createPDF() {
     // display the certificate
     $('#cert').css('display', 'flex');
 
-    let fileName = userInput + "_TRAC_Certificate.pdf" 
+    let fileName = userInput + " TRAC Certificate.pdf" 
 
     // download a pdf of the certificate
     var makepdf = document.getElementById("cert");
     var opt = {
         margin:       1,
-        filename:     fileName,
+        filename:     fileName.replaceAll(" ", "_"),
         image:        { type: 'jpeg', quality: 0.98 },
         html2canvas:  { scale: 2 },
         jsPDF:        { unit: 'in', format: 'letter', orientation: 'landscape' }
