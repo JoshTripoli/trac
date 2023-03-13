@@ -93,3 +93,29 @@
 .innerWhiteBox {
     /* background-color: #F5F8FA; */
 }
+
+/* fix certificate */
+@media (max-width: 850px){
+    #cert span {
+        overflow: scroll !important;
+        font-size: 150% !important;
+        /* background-color: green !important; */
+    }
+    #cert div{
+        width: 100% !important;
+        overflow: hidden;
+        /* background-color: red !important; */
+    }
+
+    #cert img{
+        width: 80% !important;
+        overflow: hidden;
+    }
+}
+
+/* fix video when width less than 770px */
+@media (max-width: 770px){
+    #about-video {
+        width: 100%;
+    }
+}

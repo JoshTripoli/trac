@@ -572,7 +572,7 @@ footer {
 
 @media (max-width: 340px){
   #page-container {
-    background-color: pink !important;
+    /* background-color: pink !important; */
     padding-bottom: 150vw;
   }
 
