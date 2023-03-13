@@ -45,6 +45,10 @@ function clickGotIt() {
     } else {
         $('#completeButton').css('display', 'none');
         $('#completeContainer').css('display', 'block');
+        
+        // show return to top button
+        $('#more-info').css('display', 'block');
+        $('#top-button').css('display', 'flex');
     }
 
     // if ($('.completeContainer').is(':hidden')) {
@@ -81,10 +85,6 @@ function createPDF() {
         jsPDF:        { unit: 'in', format: 'letter', orientation: 'landscape' }
     };
     html2pdf().set(opt).from(makepdf).save();
-
-    // show return to top button
-    $('#more-info').css('display', 'block');
-    $('#top-button').css('display', 'flex');
 }
 
 $(window).on("load", function() {
