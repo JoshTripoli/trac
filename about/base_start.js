@@ -43,6 +43,7 @@ function clickGotIt() {
         $('#clickNextWarning').show();
         $('.showPrepareSteps').transition('bounce');
     } else {
+        $('#completeButton').css('display', 'none');
         $('#completeContainer').css('display', 'block');
     }
 
@@ -50,6 +51,25 @@ function clickGotIt() {
     //     $('.completeContainer').css('display', 'block');
     // }
 };
+
+function createPDF() {
+    // generate the certificate, filling in name, date, and time html
+    userInput = document.getElementById("inputName").value;
+    document.getElementById("cert-name").innerHTML = userInput;
+
+    n =  new Date();
+    y = n.getFullYear();
+    m = n.getMonth() + 1;
+    d = n.getDate();
+    document.getElementById("date").innerHTML = m + "/" + d + "/" + y + " at " + n.getHours() + ":" + n.getMinutes() + ":" + n.getSeconds();
+
+    // display the certificate
+    $('#cert').css('display', 'flex');
+
+    // download a pdf of the certificate
+    var makepdf = document.getElementById("cert");
+    html2pdf().from(makepdf).save();
+}
 
 $(window).on("load", function() {
 
