@@ -74,6 +74,7 @@ function createPDF() {
     html2pdf().from(makepdf).save();
 
     // show return to top button
+    $('#more-info').css('display', 'block');
     $('#top-button').css('display', 'flex');
 }
 
