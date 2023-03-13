@@ -159,6 +159,22 @@
         width: 90%;
         font-size: 170%;
     }
+
+    #completeContainer {
+        background-color: white;
+        padding: 20px;
+    }
+
+    #print-message {
+        width: 100%;
+        font-size: 100%;
+        margin-top: 40px;
+    }
+
+    #about-header {
+        margin-top: 40px;
+        padding: 15px
+    }
 }
 
 @media (max-width: 350px){
