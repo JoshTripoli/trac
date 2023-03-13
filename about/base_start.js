@@ -69,9 +69,18 @@ function createPDF() {
     // display the certificate
     $('#cert').css('display', 'flex');
 
+    let fileName = userInput + "_TRAC_Certificate.pdf" 
+
     // download a pdf of the certificate
     var makepdf = document.getElementById("cert");
-    html2pdf().from(makepdf).save();
+    var opt = {
+        margin:       1,
+        filename:     fileName,
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2 },
+        jsPDF:        { unit: 'in', format: 'letter', orientation: 'landscape' }
+    };
+    html2pdf().set(opt).from(makepdf).save();
 
     // show return to top button
     $('#more-info').css('display', 'block');
