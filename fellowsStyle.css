@@ -211,10 +211,11 @@
 @media (max-width: 400px){
     .col {
         width: 100%;
-        background-color: green !important;
-        padding: 0 !important;
-        margin: 0 !important;
+        /* background-color: green !important; */
+        padding: 0;
+        margin: 0;
 
+        margin-bottom: 30px;
     }
 
     .col img {

@@ -118,4 +118,52 @@
     #about-video {
         width: 100%;
     }
+
+    #about-header {
+        /* background-color: purple !important; */
+        width: 100%;
+        font-size: 200%;
+    }
+}
+
+@media (max-width: 450px){
+    .innerWhiteBox {
+        background-color: #33315D;
+
+        width: 115.8%;
+        margin: 0;
+        padding: 0;
+        /* background-color: red !important; */
+        margin-left: -30px;
+    }
+
+    .innerWhiteBox h1 {
+        /* color: white; */
+        margin-bottom: -40px;
+        background-color: white;
+    }
+
+    .innerWhiteBox h2, p, #cert{
+        background-color: white;
+    }
+
+    .pageContent2 {
+        background-color: green !important;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 1.5em;
+    }
+
+    #about-header {
+        /* background-color: purple !important; */
+        width: 90%;
+        font-size: 170%;
+    }
+}
+
+@media (max-width: 350px){
+    .innerWhiteBox {
+        width: 108.5%;
+        margin-left: -30.5px;
+    }
 }
