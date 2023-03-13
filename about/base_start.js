@@ -53,6 +53,9 @@ function clickGotIt() {
 };
 
 function createPDF() {
+    // can only create one cert, so hide creation button now that one is being made
+    $('#completeContainer').css('display', 'none');
+
     // generate the certificate, filling in name, date, and time html
     userInput = document.getElementById("inputName").value;
     document.getElementById("cert-name").innerHTML = userInput;
