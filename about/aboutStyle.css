@@ -4,6 +4,13 @@
     margin-top: 30px;
 }
 
+#top-button {
+    justify-content: center;
+    margin-top: 30px;
+    display: none;
+    text-align: center;
+}
+
 #completeButton {
     display: flex;
     justify-content: center;

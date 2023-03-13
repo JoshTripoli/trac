@@ -72,6 +72,9 @@ function createPDF() {
     // download a pdf of the certificate
     var makepdf = document.getElementById("cert");
     html2pdf().from(makepdf).save();
+
+    // show return to top button
+    $('#top-button').css('display', 'flex');
 }
 
 $(window).on("load", function() {
@@ -130,3 +133,9 @@ $(window).on("load", function() {
     });
 
 });
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
