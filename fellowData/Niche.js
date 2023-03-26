@@ -1,4 +1,3 @@
 export const Niche = `id,assignment,name,pronouns,hometown,year,majorMinor,info,email,focus
 jct324,"Niche","Joss Tripoli",they/them,"Perkasie, PA",2023,"Computer Science, Japanese","Hello! Some things I like to do are listen to music, juggle, and make art. Software and web development are passions of mine, so I am excited to be working on the TRAC website this semester. I hope to improve the website's branding & consistency, presence, information, and functionality. Previously I have TRAC'ed BUS 003 and BIOS 042.",jct324@lehigh.edu,"Website"
-missing,"Niche","Bisceglia",‎,"",‎,"","",missing@lehigh.edu,"Alumni"`;
-
+blb423,"Niche","Brooke Bisceglia",she/her,"Chappaqua, NY",2023,"Journalism, Psychology","Hello! This semester, I am working on the TRAC program's Alumni Initiative, planning events to forge connections between TRAC Alumni and current fellows and writing the TRAC Newsletters. I have a passion for writing and communications and have loved helping students advance in their coursework throughout my time in TRAC. I have previously worked with BUS 003 and ANTH 011.",blb423@lehigh.edu,"Alumni"`;
