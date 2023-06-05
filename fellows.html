@@ -286,7 +286,14 @@
         makeNicheGray.style.backgroundColor = "#ccc";
 
         fellowCSV = Niche;
-      } 
+      } else { // display the first section, LT
+        localStorage.setItem("tabToDisplay", "Leadership Team");
+        const title = document.getElementById('classTitle');
+        title.innerHTML = localStorage.getItem("tabToDisplay");  
+        const makeLTGray = document.getElementById('lt-tab');
+        makeLTGray.style.backgroundColor = "#ccc";
+        fellowCSV = LT;
+      }
       
 
 
