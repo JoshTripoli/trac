@@ -9,7 +9,7 @@ cep223,"LT","Caroline Palmer",she/her,"Princeton Junction, NJ",2023,"Biology, Re
 cjs323,"LT","Caroline Spindel",she/her,"Murfreesboro, TN",2023,"IDEAS, Electrical Engineering, Psychology, Philosophy","The 2022-2023 school year is my third year as a TRAC Fellow. I have TRAC'ed four courses (ENGR 095, REL 122, MLL 090), as well as working as the Lead Fellow for ANTH 011. For the 2022-2023 school year, I am working as a Veteran Fellow Mentor Fellow as a member of the Leadership Team. My favorite aspects of TRAC are conferencing, hosting Veteran Fellow Seminars, and participating in the recruitment process. ",cjs323@lehigh.edu
 hideMe,"LT","",‎,"",‎,"","",missing@lehigh.edu
 hideMe,"LT","",‎,"",‎,"","",missing@lehigh.edu`;
-`;
+
 
 // lin,name,pronouns,picture,hometown,year,semester,yearsIn,majorMinor,info
 // id,assignment,name,pronouns,hometown,year,majorMinor,info,email  ** want
